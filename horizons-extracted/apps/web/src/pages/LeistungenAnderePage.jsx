@@ -1,0 +1,119 @@
+
+import React from 'react';
+import { Helmet } from 'react-helmet';
+import { motion } from 'framer-motion';
+import { MapPin, FileText, Palette, CreditCard, Sparkles, HelpCircle } from 'lucide-react';
+import Header from '@/components/Header.jsx';
+import Footer from '@/components/Footer.jsx';
+import PricingSection from '@/components/PricingSection.jsx';
+
+const LeistungenAnderePage = () => {
+  const services = [
+    {
+      icon: MapPin,
+      title: 'Google Maps Einträge',
+      description: 'Optimierung deines Google My Business Profils für bessere lokale Sichtbarkeit'
+    },
+    {
+      icon: FileText,
+      title: 'Flyer & Printdesign',
+      description: 'Professionelle Gestaltung von Flyern, Broschüren und anderen Printmedien'
+    },
+    {
+      icon: Palette,
+      title: 'Firmendesign & Corporate Identity',
+      description: 'Entwicklung eines einheitlichen visuellen Auftritts für dein Unternehmen'
+    },
+    {
+      icon: CreditCard,
+      title: 'Visitenkarten',
+      description: 'Design und Druck hochwertiger Visitenkarten, die im Gedächtnis bleiben'
+    },
+    {
+      icon: Sparkles,
+      title: 'Logodesign',
+      description: 'Kreative Logoentwicklung, die deine Marke perfekt repräsentiert'
+    },
+    {
+      icon: HelpCircle,
+      title: 'Weitere Leistungen auf Anfrage',
+      description: 'Hast du ein spezielles Projekt? Kontaktiere uns für individuelle Lösungen'
+    }
+  ];
+
+  return (
+    <>
+      <Helmet>
+        <title>Weitere Leistungen - Castle Media</title>
+        <meta name="description" content="Von Google Maps Einträgen bis Logodesign - entdecke unser vollständiges Leistungsportfolio bei Castle Media." />
+      </Helmet>
+
+      <Header />
+
+      <main className="pt-32 pb-20 bg-background">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h1 className="mb-6 text-secondary">Weitere Leistungen</h1>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Von Google Maps Einträgen bis Logodesign - wir bieten umfassende Lösungen für deine digitale und analoge Präsenz.
+            </p>
+          </motion.div>
+
+          {/* Services Grid */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
+            {services.map((service, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 * index }}
+                className="card-clean group"
+              >
+                <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors duration-300">
+                  <service.icon className="w-7 h-7 text-primary" />
+                </div>
+                <h3 className="text-xl font-semibold mb-3 text-secondary">{service.title}</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  {service.description}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* CTA Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.8 }}
+            className="text-center mb-20"
+          >
+            <div className="card-clean max-w-3xl mx-auto">
+              <h2 className="mb-4 text-secondary">Nicht das Richtige dabei?</h2>
+              <p className="text-secondary/80 mb-8 leading-relaxed">
+                Wir bieten auch individuelle Lösungen für spezielle Anforderungen. 
+                Kontaktiere uns und lass uns gemeinsam die perfekte Lösung für dein Projekt finden.
+              </p>
+              <a
+                href="/kontakt"
+                className="btn-primary"
+              >
+                Kostenloses Erstgespräch
+              </a>
+            </div>
+          </motion.div>
+        </div>
+      </main>
+
+      <PricingSection />
+
+      <Footer />
+    </>
+  );
+};
+
+export default LeistungenAnderePage;
