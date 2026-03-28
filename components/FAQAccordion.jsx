@@ -4,31 +4,63 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
 
+const faqs = [
+  {
+    question: 'Wie lange dauert die Umsetzung eines Projektes?',
+    answer: (
+      <p>
+        Die Dauer hängt vom Umfang ab. Eine klassische Landing Page setzen wir in der Regel innerhalb von 1–2 Wochen um. Für umfangreichere Online Shops planen wir etwa 3–4 Wochen ein. Jedoch bei der Transferierung von Medien hängt es stark von der Zusammenarbeit ab — wie schnell Medien übergeben werden und ob Sie möchten, dass wir uns um die Medienbeschaffung kümmern.
+      </p>
+    )
+  },
+  {
+    question: 'Bin ich nach dem Launch unabhängig?',
+    answer: (
+      <div className="space-y-4">
+        <p>
+          Es ist abhängig von der Größe der Veränderungen. Sie erhalten alle Zugänge und Rechte an Ihrer Website.
+        </p>
+        <p>
+          Für kleinere Anpassungen wie Text- oder Bildänderungen sind wir dauerhaft persönlich für Sie erreichbar und setzen Ihre Wünsche schnell und unkompliziert um.
+        </p>
+        <p>
+          Sollten Sie Ihre Website regelmäßig selbst erweitern wollen — zum Beispiel eine Galerie pflegen oder neue Infobeiträge veröffentlichen — richten wir Ihnen auf Wunsch ein professionelles Admin-Dashboard ein, über das Sie eigenständig Inhalte ganz ohne IT-Kenntnisse verwalten können.
+        </p>
+        <hr className="border-border" />
+        <p>
+          <strong className="text-secondary">Für größere Vorhaben</strong> — wie die Erstellung einer komplett neuen Seite oder umfangreiche strukturelle Änderungen — erstellen wir Ihnen ein individuelles Angebot, das transparent und fair kalkuliert ist, sodass Sie immer genau wissen, was auf Sie zukommt. So begleiten wir Sie selbstverständlich als verlässlicher Partner durch den gesamten Prozess — professionell, persönlich und auf Augenhöhe.
+        </p>
+      </div>
+    )
+  },
+  {
+    question: 'Bieten wir auch einzelne Leistungen an?',
+    answer: (
+      <p>
+        Ja, wir bieten auch isolierte Dienstleistungen wie Suchmaschinenoptimierung (SEO), Google Maps Einträge, Logo- und Flyerdesign oder Social Media Management an. Sprechen Sie uns einfach darauf an.
+      </p>
+    )
+  },
+  {
+    question: 'Wie verläuft das Erstgespräch?',
+    answer: (
+      <p>
+        Das Erstgespräch dauert etwa 20–30 Minuten und ist komplett kostenlos sowie unverbindlich. Wir lernen uns kennen, besprechen und visualisieren Ihre Ziele und klären erste Fragen zu Ihrem Projekt.
+      </p>
+    )
+  },
+  {
+    question: 'Wie viel muss ich in mein Projekt investieren?',
+    answer: (
+      <p>
+        Wir möchten eine transparente Preisübersicht bieten — deshalb sind alle Kosten für die jeweiligen Dienstleistungen auf den entsprechenden Seiten zu sehen. Wenn Sie sich unsicher sind, welchen Umfang und welche Dienstleistung Sie benötigen, können wir dies in Ruhe in einem Gespräch mit Ihnen durchgehen.
+      </p>
+    )
+  }
+];
+
 const FAQAccordion = () => {
   const [openIndex, setOpenIndex] = useState(null);
-
-  const faqs = [
-    {
-      question: 'Wie lange dauert die Umsetzung eines Projekts?',
-      answer: 'Die Dauer hängt vom Umfang ab. Eine klassische Landing Page setzen wir in der Regel innerhalb von 1-2 Wochen um. Für umfangreichere Online Shops planen wir etwa 3-4 Wochen ein.'
-    },
-    {
-      question: 'Mit welchen Kosten muss ich rechnen?',
-      answer: 'Unsere transparenten Pakete starten bei 700 € für eine Landing Page, 1.150 € für das empfohlene Plus-Paket und ab 1.500 € für einen Online Shop. Hinzu kommt eine monatliche Instandhaltungspauschale für Updates und Support.'
-    },
-    {
-      question: 'Bin ich nach dem Launch unabhängig?',
-      answer: 'Ja, absolut. Du erhältst alle Zugänge und Rechte an deiner Website. Wir bleiben gerne als technischer Partner an deiner Seite, aber du bist nicht an uns gebunden.'
-    },
-    {
-      question: 'Bietet ihr auch einzelne Leistungen an?',
-      answer: 'Ja, wir bieten auch isolierte Dienstleistungen wie Suchmaschinenoptimierung (SEO), Google Maps Einträge, Logodesign oder Social Media Management an. Sprich uns einfach darauf an.'
-    },
-    {
-      question: 'Wie läuft das Erstgespräch ab?',
-      answer: 'Das Erstgespräch dauert etwa 20-30 Minuten und ist komplett kostenlos sowie unverbindlich. Wir lernen uns kennen, besprechen deine Ziele und klären erste Fragen zu deinem Projekt.'
-    }
-  ];
 
   return (
     <div className="max-w-3xl mx-auto w-full">
@@ -55,7 +87,7 @@ const FAQAccordion = () => {
                   initial={{ height: 0, opacity: 0 }}
                   animate={{ height: 'auto', opacity: 1 }}
                   exit={{ height: 0, opacity: 0 }}
-                  transition={{ duration: 0.3, ease: "easeInOut" }}
+                  transition={{ duration: 0.3, ease: 'easeInOut' }}
                 >
                   <div className="px-6 pb-6 text-muted-foreground leading-relaxed">
                     {faq.answer}
