@@ -98,8 +98,8 @@ export default function HomePage() {
 
           <FAQAccordion />
 
-          <div className="mt-12 text-center">
-            <p className="text-secondary mb-6">Noch Fragen offen?</p>
+          <div className="mt-16 flex flex-col items-center gap-4">
+            <p className="text-secondary">Noch Fragen offen?</p>
             <Link href="/kontakt" className="btn-outline">
               Kostenloses Erstgespräch vereinbaren
             </Link>
