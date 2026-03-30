@@ -28,7 +28,8 @@ const Footer = () => {
               Professionelle Webdesign und Online Präsenz Lösungen. Wir gestalten Ihren Auftritt im Netz.
             </p>
             <div className="space-y-2 text-white/80">
-              <p>info@keanodecker.com</p>
+              <a href="tel:+4915159167426" className="block hover:text-primary transition-colors duration-200">+49 151 59167426</a>
+              <a href="mailto:info@keanodecker.com" className="block hover:text-primary transition-colors duration-200">info@keanodecker.com</a>
               <p>Friesenheim / Deutschland</p>
             </div>
           </div>
