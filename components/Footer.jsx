@@ -25,7 +25,7 @@ const Footer = () => {
               />
             </Link>
             <p className="text-white/70 mb-6 leading-relaxed">
-              Professionelle Webdesign und Online Präsenz Lösungen. Wir gestalten deinen Auftritt im Netz.
+              Professionelle Webdesign und Online Präsenz Lösungen. Wir gestalten Ihren Auftritt im Netz.
             </p>
             <div className="space-y-2 text-white/80">
               <p>info@keanodecker.com</p>
@@ -55,7 +55,7 @@ const Footer = () => {
           <div className="md:col-span-4 flex flex-col md:items-end">
             <h4 className="text-lg font-semibold mb-6 text-white">Projekt starten</h4>
             <p className="text-white/70 mb-6 md:text-right leading-relaxed">
-              Bereit für deine neue digitale Präsenz? Lass uns unverbindlich sprechen.
+              Bereit für Ihre neue digitale Präsenz? Sprechen Sie uns unverbindlich an.
             </p>
             <Link
               href="/kontakt"

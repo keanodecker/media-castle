@@ -37,7 +37,7 @@ const PricingSection = () => {
       price: '1.500',
       prefix: 'ab ',
       monthly: '120',
-      description: 'Dein professioneller digitaler Verkaufskanal.',
+      description: 'Ihr professioneller digitaler Verkaufskanal.',
       features: [
         'Individuelles Shop-Design',
         'Zahlungsanbieter-Integration',
@@ -56,7 +56,7 @@ const PricingSection = () => {
         <div className="text-center mb-16">
           <h2 className="mb-4 text-secondary">Transparente Preise</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Wähle das passende Paket für deine Anforderungen. Keine versteckten Kosten, klare Kommunikation.
+            Wählen Sie das passende Paket für Ihre Anforderungen. Keine versteckten Kosten, klare Kommunikation.
           </p>
         </div>
 

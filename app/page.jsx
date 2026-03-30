@@ -55,12 +55,12 @@ export default function HomePage() {
             </div>
 
             <h1 className="text-white mb-6">
-              Deine digitale Präsenz.<br />
+              Ihre digitale Präsenz.<br />
               Professionell. Wirkungsvoll.
             </h1>
 
             <p className="text-xl md:text-2xl text-white/80 mb-12 max-w-3xl mx-auto leading-relaxed">
-              Rund um Online Präsenz — Castle Media gestaltet deinen Auftritt im Netz.
+              Rund um Online Präsenz — Castle Media gestaltet Ihren Auftritt im Netz.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -92,7 +92,7 @@ export default function HomePage() {
           <div className="text-center mb-16">
             <h2 className="mb-4 text-secondary">Häufig gestellte Fragen</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Hier findest du Antworten auf die wichtigsten Fragen rund um unsere Zusammenarbeit.
+              Hier finden Sie Antworten auf die wichtigsten Fragen rund um unsere Zusammenarbeit.
             </p>
           </div>
 

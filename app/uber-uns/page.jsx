@@ -15,12 +15,12 @@ export default function UberUnsPage() {
     {
       icon: Lightbulb,
       title: 'Individuelle Lösungen',
-      description: 'Jedes Projekt ist einzigartig. Wir entwickeln maßgeschneiderte Konzepte, die genau zu deinen Anforderungen und Zielen passen.'
+      description: 'Jedes Projekt ist einzigartig. Wir entwickeln maßgeschneiderte Konzepte, die genau zu Ihren Anforderungen und Zielen passen.'
     },
     {
       icon: Handshake,
       title: 'Langfristige Partnerschaft',
-      description: 'Wir begleiten dich nicht nur bei der Umsetzung, sondern stehen dir auch danach als verlässlicher Partner zur Seite.'
+      description: 'Wir begleiten Sie nicht nur bei der Umsetzung, sondern stehen Ihnen auch danach als verlässlicher Partner zur Seite.'
     }
   ];
 
@@ -40,14 +40,14 @@ export default function UberUnsPage() {
             <h1 className="mb-8 text-secondary">Über Castle Media</h1>
             <div className="card-clean">
               <p className="text-lg text-secondary/80 leading-relaxed mb-6">
-                Castle Media ist dein Partner für professionelle digitale Präsenz in Lahr und Umgebung.
+                Castle Media ist Ihr Partner für professionelle digitale Präsenz in Lahr und Umgebung.
                 Wir verbinden kreatives Design mit technischer Expertise, um Websites und Online-Lösungen
                 zu schaffen, die nicht nur gut aussehen, sondern auch messbare Ergebnisse liefern.
               </p>
               <p className="text-lg text-secondary/80 leading-relaxed">
                 Unser Ziel ist es, kleinen und mittelständischen Unternehmen zu helfen, ihre digitale
                 Präsenz zu stärken und online erfolgreich zu sein. Mit Leidenschaft, Fachwissen und
-                einem klaren Fokus auf deine Bedürfnisse setzen wir deine Projekte um.
+                einem klaren Fokus auf Ihre Bedürfnisse setzen wir Ihre Projekte um.
               </p>
             </div>
           </motion.div>
@@ -101,7 +101,7 @@ export default function UberUnsPage() {
                   <h3 className="text-lg font-semibold mb-3 text-secondary">Transparenz</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     Offene Kommunikation und klare Prozesse sind die Basis unserer Zusammenarbeit.
-                    Du weißt immer, woran wir arbeiten.
+                    Sie wissen immer, woran wir arbeiten.
                   </p>
                 </div>
                 <div>
@@ -114,7 +114,7 @@ export default function UberUnsPage() {
                 <div>
                   <h3 className="text-lg font-semibold mb-3 text-secondary">Verlässlichkeit</h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    Auf uns kannst du zählen - von der ersten Idee bis zur langfristigen Betreuung.
+                    Auf uns können Sie zählen — von der ersten Idee bis zur langfristigen Betreuung.
                     Wir halten unsere Versprechen.
                   </p>
                 </div>
@@ -129,9 +129,9 @@ export default function UberUnsPage() {
             transition={{ duration: 0.6, delay: 0.8 }}
             className="mt-20 text-center"
           >
-            <h2 className="mb-4 text-secondary">Lass uns gemeinsam dein Projekt starten</h2>
+            <h2 className="mb-4 text-secondary">Lassen Sie uns gemeinsam Ihr Projekt starten</h2>
             <p className="text-secondary/80 mb-8 max-w-2xl mx-auto">
-              Bereit für deine neue digitale Präsenz? Kontaktiere uns für ein unverbindliches Erstgespräch.
+              Bereit für Ihre neue digitale Präsenz? Kontaktieren Sie uns für ein unverbindliches Erstgespräch.
             </p>
             <a href="/kontakt" className="btn-primary">
               Kostenloses Erstgespräch

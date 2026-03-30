@@ -16,7 +16,7 @@ export default function LeistungenWebdesignPage() {
     {
       icon: Palette,
       title: 'Individuelles Design',
-      description: 'Jede Website wird speziell für deine Marke und Zielgruppe gestaltet'
+      description: 'Jede Website wird speziell für Ihre Marke und Zielgruppe gestaltet'
     },
     {
       icon: Smartphone,
@@ -57,15 +57,15 @@ export default function LeistungenWebdesignPage() {
           >
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
-                <h2 className="mb-6 text-secondary">Deine Website als digitales Aushängeschild</h2>
+                <h2 className="mb-6 text-secondary">Ihre Website als digitales Aushängeschild</h2>
                 <p className="text-secondary/80 leading-relaxed mb-6">
                   Eine professionelle Website ist heute unverzichtbar. Wir entwickeln maßgeschneiderte
-                  Web-Lösungen, die nicht nur gut aussehen, sondern auch deine Geschäftsziele unterstützen.
+                  Web-Lösungen, die nicht nur gut aussehen, sondern auch Ihre Geschäftsziele unterstützen.
                 </p>
                 <p className="text-secondary/80 leading-relaxed mb-8">
-                  Von der ersten Konzeption über das Design bis zur technischen Umsetzung -
-                  wir begleiten dich durch den gesamten Prozess und sorgen dafür, dass deine
-                  Website genau das wird, was du dir vorstellst.
+                  Von der ersten Konzeption über das Design bis zur technischen Umsetzung —
+                  wir begleiten Sie durch den gesamten Prozess und sorgen dafür, dass Ihre
+                  Website genau das wird, was Sie sich vorstellen.
                 </p>
                 <div className="flex flex-wrap gap-3 mb-8">
                   <span className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">
