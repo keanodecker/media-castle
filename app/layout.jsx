@@ -2,8 +2,28 @@ import './globals.css';
 import { Toaster } from 'sonner';
 
 export const metadata = {
-  title: 'Media Castle - Ihre digitale Präsenz',
-  description: 'Professionelle Webdesign und Online Präsenz Lösungen von Media Castle. Wir gestalten Ihren Auftritt im Netz.',
+  metadataBase: new URL('https://media-castle.de'),
+  title: {
+    default: 'Media Castle | Webdesign & Online Marketing Lahr',
+    template: '%s | Media Castle',
+  },
+  description: 'Professionelles Webdesign und Online Marketing für Unternehmen in Lahr und Umgebung. Individuelle Websites, SEO & Social Media — aus einer Hand.',
+  keywords: [
+    'Webdesign Lahr', 'Website erstellen Lahr', 'Webdesign Friesenheim',
+    'SEO Lahr', 'Online Marketing Lahr', 'Social Media Management Lahr',
+    'Webdesign Agentur Lahr', 'Homepage erstellen Lahr', 'Website Agentur Ortenau',
+  ],
+  openGraph: {
+    type: 'website',
+    locale: 'de_DE',
+    siteName: 'Media Castle',
+    title: 'Media Castle | Webdesign & Online Marketing Lahr',
+    description: 'Professionelles Webdesign und Online Marketing für Unternehmen in Lahr und Umgebung.',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({ children }) {

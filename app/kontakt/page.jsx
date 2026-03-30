@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, MapPin, Send } from 'lucide-react';
+import { Mail, MapPin, Send, Phone } from 'lucide-react';
 import { toast } from 'sonner';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -37,11 +37,20 @@ export default function KontaktPage() {
 
     setIsSubmitting(true);
 
-    setTimeout(() => {
-      toast.success('Nachricht gesendet. Wir melden uns bald bei Ihnen');
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+      if (!res.ok) throw new Error();
+      toast.success('Nachricht gesendet! Wir melden uns bald bei Ihnen.');
       setFormData({ name: '', email: '', message: '' });
+    } catch {
+      toast.error('Fehler beim Senden. Bitte schreiben Sie uns direkt an info@keanodecker.com');
+    } finally {
       setIsSubmitting(false);
-    }, 1500);
+    }
   };
 
   const processSteps = [
@@ -207,6 +216,23 @@ export default function KontaktPage() {
                       className="text-muted-foreground hover:text-primary transition-colors duration-200"
                     >
                       info@keanodecker.com
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div className="card-clean p-6">
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <Phone className="w-6 h-6 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold mb-1 text-secondary">Telefon</h3>
+                    <a
+                      href="tel:+4915159167426"
+                      className="text-muted-foreground hover:text-primary transition-colors duration-200"
+                    >
+                      +49 151 59167426
                     </a>
                   </div>
                 </div>
