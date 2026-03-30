@@ -1,7 +1,8 @@
 'use client';
 
+import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { MapPin, FileText, Palette, CreditCard, Sparkles, HelpCircle } from 'lucide-react';
+import { MapPin, FileText, Palette, CreditCard, Sparkles, HelpCircle, LayoutDashboard } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import PricingSection from '@/components/PricingSection';
@@ -34,6 +35,12 @@ export default function LeistungenAnderePage() {
       description: 'Kreative Logoentwicklung, die Ihre Marke perfekt repräsentiert'
     },
     {
+      icon: LayoutDashboard,
+      title: 'Individuelles Admin-Dashboard',
+      description: 'Verwalten Sie Ihre Website-Inhalte eigenständig — ohne IT-Kenntnisse, ohne Aufwand.',
+      href: '/leistungen/admin-dashboard'
+    },
+    {
       icon: HelpCircle,
       title: 'Weitere Leistungen auf Anfrage',
       description: 'Haben Sie ein spezielles Projekt? Kontaktieren Sie uns für individuelle Lösungen'
@@ -60,23 +67,32 @@ export default function LeistungenAnderePage() {
 
           {/* Services Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
-            {services.map((service, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 * index }}
-                className="card-clean group"
-              >
-                <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors duration-300">
-                  <service.icon className="w-7 h-7 text-primary" />
-                </div>
-                <h3 className="text-xl font-semibold mb-3 text-secondary">{service.title}</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  {service.description}
-                </p>
-              </motion.div>
-            ))}
+            {services.map((service, index) => {
+              const CardWrapper = service.href ? Link : 'div';
+              return (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.1 * index }}
+                >
+                  <CardWrapper
+                    {...(service.href ? { href: service.href } : {})}
+                    className="card-clean group block h-full"
+                  >
+                    <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors duration-300">
+                      <service.icon className="w-7 h-7 text-primary" />
+                    </div>
+                    <h3 className={`text-xl font-semibold mb-3 text-secondary ${service.href ? 'group-hover:text-primary transition-colors duration-200' : ''}`}>
+                      {service.title}
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed">
+                      {service.description}
+                    </p>
+                  </CardWrapper>
+                </motion.div>
+              );
+            })}
           </div>
 
           {/* CTA Section */}

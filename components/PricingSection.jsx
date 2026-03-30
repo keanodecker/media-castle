@@ -1,55 +1,59 @@
 import Link from 'next/link';
 import { Check } from 'lucide-react';
 
-const PricingSection = () => {
-  const plans = [
-    {
-      name: 'Landing Page',
-      price: '700',
-      monthly: '55',
-      description: 'Perfekt für den professionellen Start im Netz.',
-      features: [
-        'Individuelles Design',
-        'Responsive Entwicklung',
-        'Kontaktformular',
-        'Basis SEO-Optimierung',
-        'DSGVO-konform'
-      ],
-      recommended: false
-    },
-    {
-      name: 'Landing Page Plus',
-      price: '1.150',
-      monthly: '75',
-      description: 'Erweiterte Funktionen für mehr Reichweite.',
-      features: [
-        'Alles aus Landing Page',
-        'Bis zu 5 Unterseiten',
-        'Erweiterte SEO-Optimierung',
-        'Google My Business Setup',
-        'Performance Optimierung',
-        'Content Management System'
-      ],
-      recommended: true
-    },
-    {
-      name: 'Online Shop',
-      price: '1.500',
-      prefix: 'ab ',
-      monthly: '120',
-      description: 'Ihr professioneller digitaler Verkaufskanal.',
-      features: [
-        'Individuelles Shop-Design',
-        'Zahlungsanbieter-Integration',
-        'Produktverwaltung',
-        'Warenkorb & Checkout',
-        'Rechtssichere Umsetzung',
-        'Schulung zur Shop-Pflege'
-      ],
-      recommended: false
-    }
-  ];
+const adminDashboardFeature = {
+  label: 'Bei Bedarf individuelles Admin-Dashboard',
+  href: '/leistungen/admin-dashboard'
+};
 
+const plans = [
+  {
+    name: 'Landing Page',
+    price: '700',
+    monthly: '50',
+    description: 'Perfekt für den professionellen Start im Netz.',
+    features: [
+      { label: 'Individuelles Design' },
+      { label: 'Responsive Entwicklung' },
+      { label: 'Kontaktformular' },
+      { label: 'Basis SEO-Optimierung' },
+      { label: 'DSGVO-konform' },
+      adminDashboardFeature
+    ],
+    recommended: false
+  },
+  {
+    name: 'Landing Page Plus',
+    price: '1.150',
+    monthly: '70',
+    description: 'Erweiterte Funktionen für mehr Reichweite.',
+    features: [
+      { label: 'Alles aus Landing Page' },
+      { label: 'Erweiterte SEO-Optimierung' },
+      { label: 'Individuelle Video- & Medieninhalte auf Anfrage' },
+      adminDashboardFeature
+    ],
+    recommended: true
+  },
+  {
+    name: 'Online Shop',
+    price: '1.500',
+    prefix: 'ab ',
+    monthly: '90',
+    description: 'Ihr professioneller digitaler Verkaufskanal.',
+    features: [
+      { label: 'Individuelles Shop-Design' },
+      { label: 'Zahlungsanbieter-Integration' },
+      { label: 'Produktverwaltung' },
+      { label: 'Warenkorb & Checkout' },
+      { label: 'Rechtssichere Umsetzung' },
+      { label: 'Schulung zur Shop-Pflege' }
+    ],
+    recommended: false
+  }
+];
+
+const PricingSection = () => {
   return (
     <section className="py-24 bg-muted/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -95,8 +99,17 @@ const PricingSection = () => {
               <ul className="space-y-4 mb-8">
                 {plan.features.map((feature, fIndex) => (
                   <li key={fIndex} className="flex items-start gap-3">
-                    <Check className="w-5 h-5 text-primary flex-shrink-0" />
-                    <span className="text-secondary/80 text-sm">{feature}</span>
+                    <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                    {feature.href ? (
+                      <Link
+                        href={feature.href}
+                        className="text-secondary/80 text-sm underline underline-offset-2 hover:text-primary transition-colors duration-200"
+                      >
+                        {feature.label}
+                      </Link>
+                    ) : (
+                      <span className="text-secondary/80 text-sm">{feature.label}</span>
+                    )}
                   </li>
                 ))}
               </ul>
