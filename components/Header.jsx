@@ -29,7 +29,7 @@ const Header = () => {
     { name: 'Home', path: '/' },
     {
       name: 'Leistungen',
-      path: '/leistungen/webdesign',
+      path: '/leistungen',
       dropdown: [
         { name: 'Webdesign', path: '/leistungen/webdesign' },
         { name: 'Online Präsenz', path: '/leistungen/online-prasenz' },
