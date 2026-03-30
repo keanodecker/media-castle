@@ -5,6 +5,7 @@ import { Search, TrendingUp, Users, MessageCircle } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import PricingSection from '@/components/PricingSection';
+import { FeyButton } from '@/components/ui/fey-button';
 
 export default function LeistungenOnlinePrasenzPage() {
   return (
@@ -65,9 +66,9 @@ export default function LeistungenOnlinePrasenzPage() {
                     TikTok
                   </span>
                 </div>
-                <a href="/kontakt" className="btn-outline">
+                <FeyButton href="/kontakt" variant="glass">
                   Kostenloses Erstgespräch
-                </a>
+                </FeyButton>
               </div>
               <div>
                 <div className="aspect-square rounded-2xl bg-muted flex items-center justify-center">
@@ -113,9 +114,9 @@ export default function LeistungenOnlinePrasenzPage() {
                     <span className="text-secondary/80">Lokale Suchmaschinenoptimierung</span>
                   </li>
                 </ul>
-                <a href="/kontakt" className="btn-primary">
+                <FeyButton href="/kontakt" variant="primary">
                   Kostenloses Erstgespräch
-                </a>
+                </FeyButton>
               </div>
             </div>
           </motion.div>

@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { Code, Palette, Smartphone, Zap, Search, TrendingUp, Users, MessageCircle, MapPin, FileText, Sparkles, LayoutDashboard } from 'lucide-react';
 import { MultiIconDisplay } from '@/components/ui/interactive-empty-state';
+import { FeyButton } from '@/components/ui/fey-button';
 
 const LeistungenSection = () => {
   return (
@@ -27,9 +28,9 @@ const LeistungenSection = () => {
               <span className="px-3 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-medium">DSGVO-konform</span>
               <span className="px-3 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-medium">Schnelle Ladezeiten</span>
             </div>
-            <Link href="/leistungen/webdesign" className="btn-primary">
+            <FeyButton href="/leistungen/webdesign" variant="primary">
               Mehr erfahren
-            </Link>
+            </FeyButton>
           </div>
           <div className="grid grid-cols-2 gap-4">
             {[
@@ -70,9 +71,9 @@ const LeistungenSection = () => {
             <span className="px-3 py-1 bg-muted text-secondary rounded-full text-sm font-medium">Facebook</span>
             <span className="px-3 py-1 bg-muted text-secondary rounded-full text-sm font-medium">TikTok</span>
           </div>
-          <Link href="/leistungen/online-prasenz" className="inline-flex items-center justify-center w-full px-6 py-3 rounded-full font-medium text-base transition-all duration-200 bg-blue-50/80 border-2 border-secondary/50 text-secondary backdrop-blur-sm hover:bg-primary/10 hover:border-primary hover:text-primary shadow-[inset_0_1px_2px_rgba(255,255,255,0.8)]">
+          <FeyButton href="/leistungen/online-prasenz" variant="glass" className="w-full">
             Mehr erfahren
-          </Link>
+          </FeyButton>
         </div>
 
         {/* SEO */}
@@ -96,9 +97,9 @@ const LeistungenSection = () => {
               </li>
             ))}
           </ul>
-          <Link href="/leistungen/online-prasenz" className="inline-flex items-center justify-center w-full px-6 py-3 rounded-full font-medium text-base transition-all duration-200 bg-blue-50/80 border-2 border-secondary/50 text-secondary backdrop-blur-sm hover:bg-primary/10 hover:border-primary hover:text-primary shadow-[inset_0_1px_2px_rgba(255,255,255,0.8)]">
+          <FeyButton href="/leistungen/online-prasenz" variant="glass" className="w-full">
             Mehr erfahren
-          </Link>
+          </FeyButton>
         </div>
       </div>
 
@@ -117,9 +118,9 @@ const LeistungenSection = () => {
               bis hin zum individuellen Admin-Dashboard — wir bieten umfassende
               Lösungen für Ihre digitale und analoge Präsenz.
             </p>
-            <Link href="/leistungen/andere" className="btn-primary">
+            <FeyButton href="/leistungen/andere" variant="primary">
               Alle Leistungen ansehen
-            </Link>
+            </FeyButton>
           </div>
 
           {/* Animierte Icon-Gruppen */}
