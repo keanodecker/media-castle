@@ -45,9 +45,10 @@ export default function UberUnsPage() {
                 zu schaffen, die nicht nur gut aussehen, sondern auch messbare Ergebnisse liefern.
               </p>
               <p className="text-lg text-secondary/80 leading-relaxed">
-                Unser Ziel ist es, kleinen und mittelständischen Unternehmen zu helfen, ihre digitale
-                Präsenz zu stärken und online erfolgreich zu sein. Mit Leidenschaft, Fachwissen und
-                einem klaren Fokus auf Ihre Bedürfnisse setzen wir Ihre Projekte um.
+                Unser Ziel ist es, Unternehmen jeder Größe dabei zu unterstützen, ihre digitale Präsenz
+                zu stärken und online erfolgreich zu sein — vom lokalen Handwerksbetrieb bis hin zum
+                etablierten Unternehmen. Mit Leidenschaft, Fachwissen und einem klaren Fokus auf Ihre
+                Bedürfnisse setzen wir Ihre Projekte um.
               </p>
             </div>
           </motion.div>
