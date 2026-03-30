@@ -56,20 +56,20 @@ const LeistungenSection = () => {
           <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
             <MessageCircle className="w-6 h-6 text-primary" />
           </div>
-          <span className="text-xs font-semibold uppercase tracking-widest text-primary mb-2">
+          <span className="text-sm font-semibold uppercase tracking-widest text-primary mb-3">
             Online Präsenz
           </span>
-          <h3 className="text-xl font-bold text-secondary mb-3">Social Media Management</h3>
-          <p className="text-secondary/80 text-sm leading-relaxed mb-4 flex-1">
+          <h3 className="text-2xl font-bold text-secondary mb-4">Social Media Management</h3>
+          <p className="text-secondary/80 text-base leading-relaxed mb-5 flex-1">
             Authentische Inhalte für Ihre Zielgruppe — wir übernehmen Planung,
             Erstellung und Betreuung Ihrer Kanäle.
           </p>
           <div className="flex flex-wrap gap-2 mb-6">
-            <span className="px-3 py-1 bg-muted text-secondary rounded-full text-xs font-medium">Instagram</span>
-            <span className="px-3 py-1 bg-muted text-secondary rounded-full text-xs font-medium">Facebook</span>
-            <span className="px-3 py-1 bg-muted text-secondary rounded-full text-xs font-medium">TikTok</span>
+            <span className="px-3 py-1 bg-muted text-secondary rounded-full text-sm font-medium">Instagram</span>
+            <span className="px-3 py-1 bg-muted text-secondary rounded-full text-sm font-medium">Facebook</span>
+            <span className="px-3 py-1 bg-muted text-secondary rounded-full text-sm font-medium">TikTok</span>
           </div>
-          <Link href="/leistungen/online-prasenz" className="btn-outline text-sm py-2.5">
+          <Link href="/leistungen/online-prasenz" className="inline-flex items-center justify-center w-full px-6 py-3 rounded-full font-medium text-base transition-all duration-200 bg-blue-50/80 border-2 border-secondary/50 text-secondary backdrop-blur-sm hover:bg-primary/10 hover:border-primary hover:text-primary shadow-[inset_0_1px_2px_rgba(255,255,255,0.8)]">
             Mehr erfahren
           </Link>
         </div>
@@ -79,23 +79,23 @@ const LeistungenSection = () => {
           <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
             <Search className="w-6 h-6 text-primary" />
           </div>
-          <span className="text-xs font-semibold uppercase tracking-widest text-primary mb-2">
+          <span className="text-sm font-semibold uppercase tracking-widest text-primary mb-3">
             Online Präsenz
           </span>
-          <h3 className="text-xl font-bold text-secondary mb-3">Online Präsenz & SEO</h3>
-          <p className="text-secondary/80 text-sm leading-relaxed mb-4 flex-1">
+          <h3 className="text-2xl font-bold text-secondary mb-4">Online Präsenz & SEO</h3>
+          <p className="text-secondary/80 text-base leading-relaxed mb-5 flex-1">
             Damit potenzielle Kunden Sie finden — wir optimieren Ihre Sichtbarkeit
             in Suchmaschinen und lokal.
           </p>
-          <ul className="space-y-2 mb-6">
+          <ul className="space-y-3 mb-6">
             {['Suchmaschinenoptimierung (SEO)', 'Google My Business', 'Lokale Optimierung'].map((item) => (
-              <li key={item} className="flex items-center gap-2 text-sm text-secondary/80">
+              <li key={item} className="flex items-center gap-2 text-base text-secondary/80">
                 <TrendingUp className="w-4 h-4 text-primary flex-shrink-0" />
                 {item}
               </li>
             ))}
           </ul>
-          <Link href="/leistungen/online-prasenz" className="btn-outline text-sm py-2.5">
+          <Link href="/leistungen/online-prasenz" className="inline-flex items-center justify-center w-full px-6 py-3 rounded-full font-medium text-base transition-all duration-200 bg-blue-50/80 border-2 border-secondary/50 text-secondary backdrop-blur-sm hover:bg-primary/10 hover:border-primary hover:text-primary shadow-[inset_0_1px_2px_rgba(255,255,255,0.8)]">
             Mehr erfahren
           </Link>
         </div>
