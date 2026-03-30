@@ -37,10 +37,10 @@ export default function UberUnsPage() {
             transition={{ duration: 0.6 }}
             className="max-w-4xl mx-auto text-center mb-20"
           >
-            <h1 className="mb-8 text-secondary">Über Castle Media</h1>
+            <h1 className="mb-8 text-secondary">Über Media Castle</h1>
             <div className="card-clean">
               <p className="text-lg text-secondary/80 leading-relaxed mb-6">
-                Castle Media ist Ihr Partner für professionelle digitale Präsenz in Lahr und Umgebung.
+                Media Castle ist Ihr Partner für professionelle digitale Präsenz in Lahr und Umgebung.
                 Wir verbinden kreatives Design mit technischer Expertise, um Websites und Online-Lösungen
                 zu schaffen, die nicht nur gut aussehen, sondern auch messbare Ergebnisse liefern.
               </p>
@@ -59,7 +59,7 @@ export default function UberUnsPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <h2 className="text-center mb-12 text-secondary">Warum Castle Media?</h2>
+            <h2 className="text-center mb-12 text-secondary">Warum Media Castle?</h2>
             <div className="grid md:grid-cols-3 gap-8">
               {trustPoints.map((point, index) => (
                 <motion.div
