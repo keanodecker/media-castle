@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { MapPin, Lightbulb, HeartHandshake as Handshake } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import { FeyButton } from '@/components/ui/fey-button';
 
 export default function UberUnsPage() {
   const trustPoints = [
@@ -134,9 +135,9 @@ export default function UberUnsPage() {
             <p className="text-secondary/80 mb-8 max-w-2xl mx-auto">
               Bereit für Ihre neue digitale Präsenz? Kontaktieren Sie uns für ein unverbindliches Erstgespräch.
             </p>
-            <a href="/kontakt" className="btn-primary">
+            <FeyButton href="/kontakt" variant="primary">
               Kostenloses Erstgespräch
-            </a>
+            </FeyButton>
           </motion.div>
         </div>
       </main>

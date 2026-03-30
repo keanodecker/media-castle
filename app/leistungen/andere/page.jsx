@@ -6,6 +6,7 @@ import { MapPin, FileText, Palette, CreditCard, Sparkles, HelpCircle, LayoutDash
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import PricingSection from '@/components/PricingSection';
+import { FeyButton } from '@/components/ui/fey-button';
 
 export default function LeistungenAnderePage() {
   const services = [
@@ -108,9 +109,9 @@ export default function LeistungenAnderePage() {
                 Wir bieten auch individuelle Lösungen für spezielle Anforderungen.
                 Kontaktieren Sie uns und wir finden gemeinsam die perfekte Lösung für Ihr Projekt.
               </p>
-              <a href="/kontakt" className="btn-primary">
+              <FeyButton href="/kontakt" variant="primary">
                 Kostenloses Erstgespräch
-              </a>
+              </FeyButton>
             </div>
           </motion.div>
         </div>

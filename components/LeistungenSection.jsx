@@ -1,5 +1,7 @@
 import Link from 'next/link';
-import { Code, Palette, Smartphone, Zap, Search, TrendingUp, Users, MessageCircle, MapPin, FileText, Sparkles } from 'lucide-react';
+import { Code, Palette, Smartphone, Zap, Search, TrendingUp, Users, MessageCircle, MapPin, FileText, Sparkles, LayoutDashboard } from 'lucide-react';
+import { MultiIconDisplay } from '@/components/ui/interactive-empty-state';
+import { FeyButton } from '@/components/ui/fey-button';
 
 const LeistungenSection = () => {
   return (
@@ -26,9 +28,9 @@ const LeistungenSection = () => {
               <span className="px-3 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-medium">DSGVO-konform</span>
               <span className="px-3 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-medium">Schnelle Ladezeiten</span>
             </div>
-            <Link href="/leistungen/webdesign" className="btn-primary">
+            <FeyButton href="/leistungen/webdesign" variant="primary">
               Mehr erfahren
-            </Link>
+            </FeyButton>
           </div>
           <div className="grid grid-cols-2 gap-4">
             {[
@@ -69,9 +71,9 @@ const LeistungenSection = () => {
             <span className="px-3 py-1 bg-muted text-secondary rounded-full text-sm font-medium">Facebook</span>
             <span className="px-3 py-1 bg-muted text-secondary rounded-full text-sm font-medium">TikTok</span>
           </div>
-          <Link href="/leistungen/online-prasenz" className="inline-flex items-center justify-center w-full px-6 py-3 rounded-full font-medium text-base transition-all duration-200 bg-blue-50/80 border-2 border-secondary/50 text-secondary backdrop-blur-sm hover:bg-primary/10 hover:border-primary hover:text-primary shadow-[inset_0_1px_2px_rgba(255,255,255,0.8)]">
+          <FeyButton href="/leistungen/online-prasenz" variant="glass" className="w-full">
             Mehr erfahren
-          </Link>
+          </FeyButton>
         </div>
 
         {/* SEO */}
@@ -95,45 +97,44 @@ const LeistungenSection = () => {
               </li>
             ))}
           </ul>
-          <Link href="/leistungen/online-prasenz" className="inline-flex items-center justify-center w-full px-6 py-3 rounded-full font-medium text-base transition-all duration-200 bg-blue-50/80 border-2 border-secondary/50 text-secondary backdrop-blur-sm hover:bg-primary/10 hover:border-primary hover:text-primary shadow-[inset_0_1px_2px_rgba(255,255,255,0.8)]">
+          <FeyButton href="/leistungen/online-prasenz" variant="glass" className="w-full">
             Mehr erfahren
-          </Link>
+          </FeyButton>
         </div>
       </div>
 
       {/* Weitere Leistungen */}
-      <div className="card-clean">
-        <div className="flex flex-col md:flex-row md:items-center gap-8">
+      <div className="card-clean group">
+        <div className="flex flex-col md:flex-row md:items-center gap-12">
           <div className="flex-1">
-            <span className="inline-block text-xs font-semibold uppercase tracking-widest text-primary mb-4">
+            <span className="inline-block text-sm font-semibold uppercase tracking-widest text-primary mb-4">
               Weitere Leistungen
             </span>
-            <h3 className="text-2xl font-bold text-secondary mb-3">
+            <h3 className="text-2xl font-bold text-secondary mb-4">
               Noch mehr für Ihren Auftritt
             </h3>
-            <p className="text-secondary/80 leading-relaxed mb-6">
+            <p className="text-secondary/80 text-base leading-relaxed mb-8">
               Von Logodesign und Corporate Identity über Flyer und Visitenkarten
               bis hin zum individuellen Admin-Dashboard — wir bieten umfassende
               Lösungen für Ihre digitale und analoge Präsenz.
             </p>
-            <Link href="/leistungen/andere" className="btn-primary">
+            <FeyButton href="/leistungen/andere" variant="primary">
               Alle Leistungen ansehen
-            </Link>
+            </FeyButton>
           </div>
-          <div className="grid grid-cols-3 gap-3 md:w-64 flex-shrink-0">
-            {[
-              { icon: Sparkles, label: 'Logodesign' },
-              { icon: FileText, label: 'Printdesign' },
-              { icon: MapPin, label: 'Google Maps' },
-              { icon: Palette, label: 'Corporate Identity' },
-              { icon: Users, label: 'Visitenkarten' },
-              { icon: Code, label: 'Admin-Dashboard' }
-            ].map(({ icon: Icon, label }) => (
-              <div key={label} className="bg-muted/50 rounded-xl p-3 flex flex-col items-center text-center gap-2">
-                <Icon className="w-5 h-5 text-primary" />
-                <span className="text-xs font-medium text-secondary leading-tight">{label}</span>
-              </div>
-            ))}
+
+          {/* Animierte Icon-Gruppen */}
+          <div className="flex-shrink-0 flex flex-col items-center gap-10">
+            <MultiIconDisplay icons={[
+              <Sparkles key="sp" className="w-6 h-6" />,
+              <Palette key="pa" className="w-6 h-6" />,
+              <FileText key="ft" className="w-6 h-6" />
+            ]} />
+            <MultiIconDisplay icons={[
+              <MapPin key="mp" className="w-6 h-6" />,
+              <LayoutDashboard key="ld" className="w-6 h-6" />,
+              <Users key="us" className="w-6 h-6" />
+            ]} />
           </div>
         </div>
       </div>
