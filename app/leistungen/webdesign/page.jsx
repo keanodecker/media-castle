@@ -5,7 +5,6 @@ import { Code, Palette, Smartphone, Zap } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import PricingSection from '@/components/PricingSection';
-import { FeyButton } from '@/components/ui/fey-button';
 
 export default function LeistungenWebdesignPage() {
   const features = [
@@ -79,9 +78,9 @@ export default function LeistungenWebdesignPage() {
                     Schnelle Ladezeiten
                   </span>
                 </div>
-                <FeyButton href="/kontakt" variant="primary">
+                <a href="/kontakt" className="btn-primary">
                   Kostenloses Erstgespräch
-                </FeyButton>
+                </a>
               </div>
               <div className="relative">
                 <div className="aspect-square rounded-2xl bg-muted flex items-center justify-center">

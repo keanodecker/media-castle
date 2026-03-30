@@ -28,9 +28,9 @@ const LeistungenSection = () => {
               <span className="px-3 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-medium">DSGVO-konform</span>
               <span className="px-3 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-medium">Schnelle Ladezeiten</span>
             </div>
-            <FeyButton href="/leistungen/webdesign" variant="primary">
+            <Link href="/leistungen/webdesign" className="btn-primary">
               Mehr erfahren
-            </FeyButton>
+            </Link>
           </div>
           <div className="grid grid-cols-2 gap-4">
             {[
@@ -118,9 +118,9 @@ const LeistungenSection = () => {
               bis hin zum individuellen Admin-Dashboard — wir bieten umfassende
               Lösungen für Ihre digitale und analoge Präsenz.
             </p>
-            <FeyButton href="/leistungen/andere" variant="primary">
+              <Link href="/leistungen/andere" className="btn-primary">
               Alle Leistungen ansehen
-            </FeyButton>
+            </Link>
           </div>
 
           {/* Animierte Icon-Gruppen */}
