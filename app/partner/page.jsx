@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -8,29 +9,25 @@ export default function PartnerPage() {
   const clients = [
     {
       name: 'Cesar Sicherheit',
-      initials: 'CS',
-      color: 'bg-secondary',
+      logo: '/Logo-Kunden/Cesarsicherheit-Logo-Website.png.png',
       services: ['Website Design', 'SEO', 'Google Maps Eintrag'],
       quote: 'Die neue Website spiegelt unsere Professionalität perfekt wider. Die Zusammenarbeit war unkompliziert und zielgerichtet.'
     },
     {
       name: 'Cesar Dienstleistungen',
-      initials: 'CD',
-      color: 'bg-secondary',
+      logo: '/Logo-Kunden/Cesar_Dienstleistungen-Logo-Website.png',
       services: ['Website Design', 'Social Media Setup', 'Firmendesign'],
       quote: 'Ein einheitlicher Auftritt, der bei unseren Kunden Vertrauen schafft. Wir sind rundum zufrieden mit dem Ergebnis.'
     },
     {
       name: 'Ballonkunst Lahr',
-      initials: 'BL',
-      color: 'bg-yellow-500',
+      logo: '/Logo-Kunden/Ballongkunst_Lahr-Logo-Website.png.png',
       services: ['Website Design', 'Online Präsenz', 'Flyer Design'],
       quote: 'Kreativ, farbenfroh und genau auf den Punkt. Unsere Online-Präsenz fängt jetzt die Magie unserer Arbeit ein.'
     },
     {
       name: 'KSL Boxing Lahr',
-      initials: 'KSL',
-      color: 'bg-red-600',
+      logo: '/Logo-Kunden/KSL-Boxing-Logo-Website.png.png',
       services: ['Website Design', 'Social Media Management', 'Logodesign'],
       quote: 'Starker Auftritt für unseren Verein. Die neue Website und das Logo bringen unsere Energie perfekt rüber.'
     },
@@ -85,11 +82,23 @@ export default function PartnerPage() {
                 <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-start">
                   {/* Logo Box */}
                   <div className="flex-shrink-0">
-                    <div className={`w-24 h-24 md:w-32 md:h-32 rounded-2xl ${client.color} flex items-center justify-center shadow-md`}>
-                      <span className="text-white font-bold text-3xl md:text-4xl tracking-wider">
-                        {client.initials}
-                      </span>
-                    </div>
+                    {client.logo ? (
+                      <div className="w-24 h-24 md:w-32 md:h-32 rounded-2xl bg-white border border-border flex items-center justify-center shadow-md overflow-hidden p-3">
+                        <Image
+                          src={client.logo}
+                          alt={`${client.name} Logo`}
+                          width={128}
+                          height={128}
+                          className="object-contain w-full h-full"
+                        />
+                      </div>
+                    ) : (
+                      <div className={`w-24 h-24 md:w-32 md:h-32 rounded-2xl ${client.color} flex items-center justify-center shadow-md`}>
+                        <span className="text-white font-bold text-3xl md:text-4xl tracking-wider">
+                          {client.initials}
+                        </span>
+                      </div>
+                    )}
                   </div>
 
                   {/* Content */}
