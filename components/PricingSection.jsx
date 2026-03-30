@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import { Check } from 'lucide-react';
-import { FeyButton } from '@/components/ui/fey-button';
 
 const adminDashboardFeature = {
   label: 'Bei Bedarf individuelles Admin-Dashboard',
@@ -115,13 +114,14 @@ const PricingSection = () => {
                 ))}
               </ul>
 
-              <FeyButton
+              <Link
                 href="/kontakt"
-                variant={plan.recommended ? 'primary' : 'glass'}
-                className="w-full"
+                className={`w-full flex justify-center ${
+                  plan.recommended ? 'btn-primary' : 'btn-outline'
+                }`}
               >
                 Kostenloses Erstgespräch
-              </FeyButton>
+              </Link>
             </div>
           ))}
         </div>

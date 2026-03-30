@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { FeyButton } from '@/components/ui/fey-button';
 
 export default function NotFound() {
   return (
@@ -7,9 +6,9 @@ export default function NotFound() {
       <div className="text-center">
         <h1 className="text-6xl font-bold text-primary mb-4">404</h1>
         <p className="text-xl text-muted-foreground mb-8">Seite nicht gefunden</p>
-        <FeyButton href="/" variant="primary">
+        <Link href="/" className="btn-primary">
           Zurück zur Startseite
-        </FeyButton>
+        </Link>
       </div>
     </div>
   );

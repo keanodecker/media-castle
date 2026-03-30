@@ -4,7 +4,6 @@ import { motion } from 'framer-motion';
 import { LayoutDashboard, Image, FileText, Settings, ShieldCheck, Users } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { FeyButton } from '@/components/ui/fey-button';
 
 export default function AdminDashboardPage() {
   const features = [
@@ -79,9 +78,9 @@ export default function AdminDashboardPage() {
                   Wir schulen Sie bei der Übergabe und stehen Ihnen danach jederzeit als Ansprechpartner
                   zur Verfügung.
                 </p>
-                <FeyButton href="/kontakt" variant="primary">
+                <a href="/kontakt" className="btn-primary">
                   Kostenloses Erstgespräch
-                </FeyButton>
+                </a>
               </div>
               <div className="relative">
                 <div className="aspect-square rounded-2xl bg-muted flex items-center justify-center">

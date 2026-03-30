@@ -9,7 +9,6 @@ import Footer from '@/components/Footer';
 import PartnerLogoBar from '@/components/PartnerLogoBar';
 import FAQAccordion from '@/components/FAQAccordion';
 import LeistungenSection from '@/components/LeistungenSection';
-import { FeyButton } from '@/components/ui/fey-button';
 
 export default function HomePage() {
   useEffect(() => {
@@ -65,14 +64,20 @@ export default function HomePage() {
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <FeyButton href="/leistungen" variant="primary">
+              <Link
+                href="/leistungen"
+                className="btn-primary group"
+              >
                 Leistungen entdecken
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
-              </FeyButton>
+              </Link>
 
-              <FeyButton href="/kontakt" variant="glass">
+              <Link
+                href="/kontakt"
+                className="btn-glass"
+              >
                 Kostenloses Erstgespräch
-              </FeyButton>
+              </Link>
             </div>
           </motion.div>
         </div>
@@ -108,9 +113,9 @@ export default function HomePage() {
 
           <div className="mt-16 flex flex-col items-center gap-4">
             <p className="text-secondary">Noch Fragen offen?</p>
-            <FeyButton href="/kontakt" variant="glass">
+            <Link href="/kontakt" className="btn-outline">
               Kostenloses Erstgespräch vereinbaren
-            </FeyButton>
+            </Link>
           </div>
         </div>
       </section>
