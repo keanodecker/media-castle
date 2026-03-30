@@ -11,7 +11,7 @@ export default function LeistungenAnderePage() {
     {
       icon: MapPin,
       title: 'Google Maps Einträge',
-      description: 'Optimierung deines Google My Business Profils für bessere lokale Sichtbarkeit'
+      description: 'Optimierung Ihres Google My Business Profils für bessere lokale Sichtbarkeit'
     },
     {
       icon: FileText,
@@ -21,7 +21,7 @@ export default function LeistungenAnderePage() {
     {
       icon: Palette,
       title: 'Firmendesign & Corporate Identity',
-      description: 'Entwicklung eines einheitlichen visuellen Auftritts für dein Unternehmen'
+      description: 'Entwicklung eines einheitlichen visuellen Auftritts für Ihr Unternehmen'
     },
     {
       icon: CreditCard,
@@ -31,12 +31,12 @@ export default function LeistungenAnderePage() {
     {
       icon: Sparkles,
       title: 'Logodesign',
-      description: 'Kreative Logoentwicklung, die deine Marke perfekt repräsentiert'
+      description: 'Kreative Logoentwicklung, die Ihre Marke perfekt repräsentiert'
     },
     {
       icon: HelpCircle,
       title: 'Weitere Leistungen auf Anfrage',
-      description: 'Hast du ein spezielles Projekt? Kontaktiere uns für individuelle Lösungen'
+      description: 'Haben Sie ein spezielles Projekt? Kontaktieren Sie uns für individuelle Lösungen'
     }
   ];
 
@@ -54,7 +54,7 @@ export default function LeistungenAnderePage() {
           >
             <h1 className="mb-6 text-secondary">Weitere Leistungen</h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Von Google Maps Einträgen bis Logodesign - wir bieten umfassende Lösungen für deine digitale und analoge Präsenz.
+              Von Google Maps Einträgen bis Logodesign — wir bieten umfassende Lösungen für Ihre digitale und analoge Präsenz.
             </p>
           </motion.div>
 
@@ -90,7 +90,7 @@ export default function LeistungenAnderePage() {
               <h2 className="mb-4 text-secondary">Nicht das Richtige dabei?</h2>
               <p className="text-secondary/80 mb-8 leading-relaxed">
                 Wir bieten auch individuelle Lösungen für spezielle Anforderungen.
-                Kontaktiere uns und lass uns gemeinsam die perfekte Lösung für dein Projekt finden.
+                Kontaktieren Sie uns und wir finden gemeinsam die perfekte Lösung für Ihr Projekt.
               </p>
               <a href="/kontakt" className="btn-primary">
                 Kostenloses Erstgespräch

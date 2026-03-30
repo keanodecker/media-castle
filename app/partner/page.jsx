@@ -140,10 +140,10 @@ export default function PartnerPage() {
             className="mt-24 text-center"
           >
             <div className="card-clean max-w-3xl mx-auto bg-muted/30">
-              <h2 className="mb-4 text-secondary">Bereit für dein eigenes Projekt?</h2>
+              <h2 className="mb-4 text-secondary">Bereit für Ihr eigenes Projekt?</h2>
               <p className="text-secondary/80 mb-8 leading-relaxed">
-                Werde Teil unserer Erfolgsgeschichten. Lass uns gemeinsam herausfinden,
-                wie wir deine digitale Präsenz auf das nächste Level heben können.
+                Werden Sie Teil unserer Erfolgsgeschichten. Lassen Sie uns gemeinsam herausfinden,
+                wie wir Ihre digitale Präsenz auf das nächste Level heben können.
               </p>
               <a href="/kontakt" className="btn-primary">
                 Kostenloses Erstgespräch

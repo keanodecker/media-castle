@@ -27,7 +27,7 @@ const faqs = [
           Sollten Sie Ihre Website regelmäßig selbst erweitern wollen — zum Beispiel eine Galerie pflegen oder neue Infobeiträge veröffentlichen — richten wir Ihnen auf Wunsch ein professionelles Admin-Dashboard ein, über das Sie eigenständig Inhalte ganz ohne IT-Kenntnisse verwalten können.
         </p>
         <p>
-          <strong className="text-secondary">Für größere Vorhaben</strong> — wie die Erstellung einer komplett neuen Seite oder umfangreiche strukturelle Änderungen — erstellen wir Ihnen ein individuelles Angebot, das transparent und fair kalkuliert ist, sodass Sie immer genau wissen, was auf Sie zukommt. So begleiten wir Sie selbstverständlich als verlässlicher Partner durch den gesamten Prozess — professionell, persönlich und auf Augenhöhe.
+          Für größere Vorhaben — wie die Erstellung einer komplett neuen Seite oder umfangreiche strukturelle Änderungen — erstellen wir Ihnen ein individuelles Angebot, das transparent und fair kalkuliert ist, sodass Sie immer genau wissen, was auf Sie zukommt. So begleiten wir Sie selbstverständlich als verlässlicher Partner durch den gesamten Prozess — professionell, persönlich und auf Augenhöhe.
         </p>
       </div>
     )

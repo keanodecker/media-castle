@@ -21,7 +21,7 @@ export default function LeistungenOnlinePrasenzPage() {
           >
             <h1 className="mb-6 text-secondary">Online Präsenz & Marketing</h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Wir sorgen dafür, dass dich deine Kunden online finden.
+              Wir sorgen dafür, dass Sie Ihre Kunden online erreichen.
             </p>
           </motion.div>
 
@@ -42,8 +42,8 @@ export default function LeistungenOnlinePrasenzPage() {
                 <h2 className="mb-6 text-secondary">Online Präsenz & SEO</h2>
                 <p className="text-secondary/80 leading-relaxed mb-6">
                   Eine schöne Website allein reicht nicht - sie muss auch gefunden werden.
-                  Wir optimieren deine Online-Präsenz für Suchmaschinen und sorgen dafür,
-                  dass potenzielle Kunden dich finden.
+                  Wir optimieren Ihre Online-Präsenz für Suchmaschinen und sorgen dafür,
+                  dass potenzielle Kunden Sie finden.
                 </p>
                 <ul className="space-y-3 mb-8">
                   <li className="flex items-start gap-3">
@@ -77,8 +77,8 @@ export default function LeistungenOnlinePrasenzPage() {
               <div>
                 <h2 className="mb-6 text-secondary">Social Media Management</h2>
                 <p className="text-secondary/80 leading-relaxed mb-6">
-                  Professionelle Betreuung deiner Social Media Kanäle. Wir erstellen
-                  authentische Inhalte, die deine Zielgruppe ansprechen und deine
+                  Professionelle Betreuung Ihrer Social Media Kanäle. Wir erstellen
+                  authentische Inhalte, die Ihre Zielgruppe ansprechen und Ihre
                   Marke stärken.
                 </p>
                 <ul className="space-y-3 mb-6">

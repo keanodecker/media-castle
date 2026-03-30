@@ -38,7 +38,7 @@ export default function KontaktPage() {
     setIsSubmitting(true);
 
     setTimeout(() => {
-      toast.success('Nachricht gesendet. Wir melden uns bald bei dir');
+      toast.success('Nachricht gesendet. Wir melden uns bald bei Ihnen');
       setFormData({ name: '', email: '', message: '' });
       setIsSubmitting(false);
     }, 1500);
@@ -48,22 +48,22 @@ export default function KontaktPage() {
     {
       icon: "💬",
       title: "Erstgespräch",
-      description: "Wir lernen uns kennen, besprechen deine Ziele und klären alle Fragen — kostenlos und unverbindlich."
+      description: "Wir lernen uns kennen, besprechen Ihre Ziele und klären alle Fragen — kostenlos und unverbindlich."
     },
     {
       icon: "📋",
       title: "Konzept",
-      description: "Wir erstellen ein maßgeschneidertes Konzept für dein Projekt mit klarem Zeitplan und Preisangebot."
+      description: "Wir erstellen ein maßgeschneidertes Konzept für Ihr Projekt mit klarem Zeitplan und Preisangebot."
     },
     {
       icon: "🚀",
       title: "Umsetzung",
-      description: "Wir setzen dein Projekt professionell um — du bist jederzeit informiert und kannst Feedback geben."
+      description: "Wir setzen Ihr Projekt professionell um — Sie sind jederzeit informiert und können Feedback geben."
     },
     {
       icon: "✅",
       title: "Launch & Support",
-      description: "Deine Website geht live. Wir bleiben als Partner an deiner Seite für Updates und Wartung."
+      description: "Ihre Website geht live. Wir bleiben als Partner an Ihrer Seite für Updates und Wartung."
     }
   ];
 
@@ -81,7 +81,7 @@ export default function KontaktPage() {
           >
             <h1 className="mb-6 text-secondary">Kontakt</h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Hast du Fragen oder möchtest ein Projekt starten? Wir freuen uns auf deine Nachricht.
+              Haben Sie Fragen oder möchten ein Projekt starten? Wir freuen uns auf Ihre Nachricht.
             </p>
           </motion.div>
 
@@ -121,7 +121,7 @@ export default function KontaktPage() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="card-clean"
             >
-              <h2 className="mb-8 text-secondary">Schreib uns</h2>
+              <h2 className="mb-8 text-secondary">Schreiben Sie uns</h2>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium mb-2 text-secondary">
@@ -134,7 +134,7 @@ export default function KontaktPage() {
                     value={formData.name}
                     onChange={handleChange}
                     className="w-full px-4 py-3 rounded-xl border border-input bg-background text-secondary placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-200"
-                    placeholder="Dein Name"
+                    placeholder="Ihr Name"
                     required
                   />
                 </div>
@@ -150,7 +150,7 @@ export default function KontaktPage() {
                     value={formData.email}
                     onChange={handleChange}
                     className="w-full px-4 py-3 rounded-xl border border-input bg-background text-secondary placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-200"
-                    placeholder="deine@email.de"
+                    placeholder="ihre@email.de"
                     required
                   />
                 </div>
@@ -166,7 +166,7 @@ export default function KontaktPage() {
                     onChange={handleChange}
                     rows={6}
                     className="w-full px-4 py-3 rounded-xl border border-input bg-background text-secondary placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-200 resize-none"
-                    placeholder="Erzähl uns von deinem Projekt..."
+                    placeholder="Erzählen Sie uns von Ihrem Projekt..."
                     required
                   />
                 </div>
@@ -230,7 +230,7 @@ export default function KontaktPage() {
                 <h3 className="font-semibold mb-4 text-secondary">Bei Fragen gerne melden</h3>
                 <p className="text-muted-foreground leading-relaxed">
                   Wir beantworten in der Regel alle Anfragen innerhalb von 24 Stunden.
-                  Für dringende Anliegen kannst du uns auch direkt per E-Mail kontaktieren.
+                  Für dringende Anliegen können Sie uns auch direkt per E-Mail kontaktieren.
                 </p>
               </div>
             </motion.div>
