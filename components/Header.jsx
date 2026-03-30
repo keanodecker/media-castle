@@ -57,7 +57,7 @@ const Header = () => {
         <Link href="/" className="flex-shrink-0 z-50 bg-white/10 backdrop-blur-md p-2 rounded-2xl border border-white/20">
           <img
             src="https://horizons-cdn.hostinger.com/92867de6-5ee6-4d9a-8fe4-ba55e55f27ef/b840180955bbfb55bf7f66f45d10f1e8.png"
-            alt="Castle Media Logo"
+            alt="Media Castle Logo"
             className="h-10 w-auto"
           />
         </Link>

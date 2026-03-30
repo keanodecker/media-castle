@@ -50,7 +50,7 @@ export default function HomePage() {
             <div className="flex items-center justify-center gap-2 mb-6">
               <Sparkles className="w-5 h-5 text-primary" />
               <span className="text-sm font-medium tracking-wide uppercase text-primary">
-                Castle Media
+                Media Castle
               </span>
             </div>
 
@@ -60,7 +60,7 @@ export default function HomePage() {
             </h1>
 
             <p className="text-xl md:text-2xl text-white/80 mb-12 max-w-3xl mx-auto leading-relaxed">
-              Rund um Online Präsenz — Castle Media gestaltet Ihren Auftritt im Netz.
+              Rund um Online Präsenz — Media Castle gestaltet Ihren Auftritt im Netz.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

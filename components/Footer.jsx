@@ -20,7 +20,7 @@ const Footer = () => {
             <Link href="/" className="inline-block mb-6">
               <img
                 src="https://horizons-cdn.hostinger.com/92867de6-5ee6-4d9a-8fe4-ba55e55f27ef/b840180955bbfb55bf7f66f45d10f1e8.png"
-                alt="Castle Media Logo"
+                alt="Media Castle Logo"
                 className="h-10 w-auto"
               />
             </Link>
@@ -61,7 +61,7 @@ const Footer = () => {
               href="/kontakt"
               className="inline-flex items-center justify-center bg-primary text-white px-6 py-3 rounded-full font-medium transition-all duration-200 hover:bg-primary/90 active:scale-[0.98]"
             >
-              Kostenloses Erstgespräch
+              Jetzt Starten
             </Link>
           </div>
         </div>
@@ -69,7 +69,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-white/60">
-            © {currentYear} Castle Media. Alle Rechte vorbehalten.
+            © {currentYear} Media Castle. Alle Rechte vorbehalten.
           </p>
           <div className="flex gap-6 text-sm text-white/60">
             <Link href="/datenschutz" className="hover:text-white transition-colors duration-200">
