@@ -10,22 +10,22 @@ export default function PartnerPage() {
     {
       name: 'Cesar Sicherheit',
       logo: '/Logo-Kunden/Cesarsicherheit-Logo-Website.png.png',
-      services: ['Website Design', 'SEO', 'Google Maps Eintrag'],
+      services: ['Website Design', 'Flyer', 'Visitenkarten'],
     },
     {
       name: 'Cesar Dienstleistungen',
       logo: '/Logo-Kunden/Cesar_Dienstleistungen-Logo-Website.png',
-      services: ['Website Design', 'Social Media Setup', 'Firmendesign'],
+      services: ['Website Design', 'Flyer', 'Visitenkarten'],
     },
     {
       name: 'Ballonkunst Lahr',
       logo: '/Logo-Kunden/Ballongkunst_Lahr-Logo-Website.png.png',
-      services: ['Website Design', 'Online Präsenz', 'Flyer Design'],
+      services: ['Website Design'],
     },
     {
       name: 'KSL Boxing Lahr',
       logo: '/Logo-Kunden/KSL-Boxing-Logo-Website.png.png',
-      services: ['Website Design', 'Social Media Management', 'Logodesign'],
+      services: ['Website Design', 'Social Media Management'],
     },
   ];
 
