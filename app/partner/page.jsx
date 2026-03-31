@@ -11,33 +11,22 @@ export default function PartnerPage() {
       name: 'Cesar Sicherheit',
       logo: '/Logo-Kunden/Cesarsicherheit-Logo-Website.png.png',
       services: ['Website Design', 'SEO', 'Google Maps Eintrag'],
-      quote: 'Die neue Website spiegelt unsere Professionalität perfekt wider. Die Zusammenarbeit war unkompliziert und zielgerichtet.'
     },
     {
       name: 'Cesar Dienstleistungen',
       logo: '/Logo-Kunden/Cesar_Dienstleistungen-Logo-Website.png',
       services: ['Website Design', 'Social Media Setup', 'Firmendesign'],
-      quote: 'Ein einheitlicher Auftritt, der bei unseren Kunden Vertrauen schafft. Wir sind rundum zufrieden mit dem Ergebnis.'
     },
     {
       name: 'Ballonkunst Lahr',
       logo: '/Logo-Kunden/Ballongkunst_Lahr-Logo-Website.png.png',
       services: ['Website Design', 'Online Präsenz', 'Flyer Design'],
-      quote: 'Kreativ, farbenfroh und genau auf den Punkt. Unsere Online-Präsenz fängt jetzt die Magie unserer Arbeit ein.'
     },
     {
       name: 'KSL Boxing Lahr',
       logo: '/Logo-Kunden/KSL-Boxing-Logo-Website.png.png',
       services: ['Website Design', 'Social Media Management', 'Logodesign'],
-      quote: 'Starker Auftritt für unseren Verein. Die neue Website und das Logo bringen unsere Energie perfekt rüber.'
     },
-    {
-      name: 'Fußballverein Lahr West',
-      initials: 'FV',
-      color: 'bg-green-600',
-      services: ['Website Design', 'Google Maps Eintrag', 'Vereinsdesign'],
-      quote: 'Endlich eine moderne Plattform für unsere Mitglieder und Fans. Die Umsetzung war schnell und professionell.'
-    }
   ];
 
   return (
@@ -121,14 +110,6 @@ export default function PartnerPage() {
                       </ul>
                     </div>
 
-                    <blockquote className="border-l-4 border-primary pl-4 py-1">
-                      <p className="text-lg text-secondary/80 italic leading-relaxed mb-2">
-                        "{client.quote}"
-                      </p>
-                      <footer className="text-sm font-medium text-muted-foreground">
-                        — {client.name}
-                      </footer>
-                    </blockquote>
                   </div>
                 </div>
 
