@@ -41,7 +41,7 @@ const faqs = [
     )
   },
   {
-    question: 'Was ist SEO-Optimierung und brauche ich das?',
+    question: 'Was ist SEO-Optimierung und in wie fern kann ich es in mein Projekt integrieren?',
     answer: (
       <div className="space-y-4">
         <p>
