@@ -41,6 +41,22 @@ const faqs = [
     )
   },
   {
+    question: 'Was ist SEO-Optimierung und in wie fern kann ich es in mein Projekt integrieren?',
+    answer: (
+      <div className="space-y-4">
+        <p>
+          SEO steht für Suchmaschinenoptimierung — kurz gesagt: Ihr Geschäft wird dort besser auffindbar, wo Ihre Kunden suchen. Wer bei Google nach Ihrem Angebot sucht, soll Sie finden.
+        </p>
+        <p>
+          Bei jeder Website, die wir erstellen, ist SEO selbstverständlich inklusive. Wir optimieren Struktur, Inhalte und technische Details von Anfang an so, dass Sie bestmöglich gefunden werden.
+        </p>
+        <p>
+          SEO bieten wir aber auch als einzelne Dienstleistung an — für Unternehmen, die bereits einen Online-Auftritt haben und ihre Sichtbarkeit gezielt verbessern möchten. Sprechen Sie uns einfach darauf an.
+        </p>
+      </div>
+    )
+  },
+  {
     question: 'Wie verläuft das Erstgespräch?',
     answer: (
       <p>
