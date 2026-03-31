@@ -21,7 +21,7 @@ const Footer = () => {
               <img
                 src="https://horizons-cdn.hostinger.com/92867de6-5ee6-4d9a-8fe4-ba55e55f27ef/b840180955bbfb55bf7f66f45d10f1e8.png"
                 alt="Media Castle Logo"
-                className="h-10 w-auto"
+                className="h-10 w-auto brightness-0 invert"
               />
             </Link>
             <p className="text-white/70 mb-6 leading-relaxed">

@@ -3,12 +3,13 @@
 import { useEffect } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { ArrowRight, Sparkles } from 'lucide-react';
+import { Sparkles } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import PartnerLogoBar from '@/components/PartnerLogoBar';
 import FAQAccordion from '@/components/FAQAccordion';
 import LeistungenSection from '@/components/LeistungenSection';
+import { LeistungenButton } from '@/components/ui/leistungen-button';
 
 export default function HomePage() {
   useEffect(() => {
@@ -59,25 +60,14 @@ export default function HomePage() {
               Professionell. Wirkungsvoll.
             </h1>
 
-            <p className="text-xl md:text-2xl text-white/80 mb-12 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl md:text-2xl text-white/80 mb-16 max-w-3xl mx-auto leading-relaxed">
               Rund um Online Präsenz — Media Castle gestaltet Ihren Auftritt im Netz.
             </p>
 
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link
-                href="/leistungen"
-                className="btn-primary group"
-              >
+            <div className="flex justify-center">
+              <LeistungenButton href="/leistungen">
                 Leistungen entdecken
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
-              </Link>
-
-              <Link
-                href="/kontakt"
-                className="btn-glass"
-              >
-                Kostenloses Erstgespräch
-              </Link>
+              </LeistungenButton>
             </div>
           </motion.div>
         </div>
