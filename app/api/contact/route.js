@@ -21,7 +21,7 @@ export async function POST(request) {
 
     await transporter.sendMail({
       from: `"${name}" <${process.env.SMTP_USER}>`,
-      to: 'info@keanodecker.com',
+      to: 'info@media-castle.com',
       replyTo: email,
       subject: `Neue Kontaktanfrage von ${name}`,
       text: `Name: ${name}\nE-Mail: ${email}\n\nNachricht:\n${message}`,
