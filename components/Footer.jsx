@@ -29,7 +29,7 @@ const Footer = () => {
             </p>
             <div className="space-y-2 text-white/80">
               <a href="tel:+4915159167426" className="block hover:text-primary transition-colors duration-200">+49 151 59167426</a>
-              <a href="mailto:info@keanodecker.com" className="block hover:text-primary transition-colors duration-200">info@keanodecker.com</a>
+              <a href="mailto:info@media-castle.com" className="block hover:text-primary transition-colors duration-200">info@media-castle.com</a>
               <p>Friesenheim / Deutschland</p>
             </div>
           </div>

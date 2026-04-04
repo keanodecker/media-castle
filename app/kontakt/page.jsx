@@ -47,7 +47,7 @@ export default function KontaktPage() {
       toast.success('Nachricht gesendet! Wir melden uns bald bei Ihnen.');
       setFormData({ name: '', email: '', message: '' });
     } catch {
-      toast.error('Fehler beim Senden. Bitte schreiben Sie uns direkt an info@keanodecker.com');
+      toast.error('Fehler beim Senden. Bitte schreiben Sie uns direkt an info@media-castle.com');
     } finally {
       setIsSubmitting(false);
     }
@@ -212,10 +212,10 @@ export default function KontaktPage() {
                   <div>
                     <h3 className="font-semibold mb-1 text-secondary">E-Mail</h3>
                     <a
-                      href="mailto:info@keanodecker.com"
+                      href="mailto:info@media-castle.com"
                       className="text-muted-foreground hover:text-primary transition-colors duration-200"
                     >
-                      info@keanodecker.com
+                      info@media-castle.com
                     </a>
                   </div>
                 </div>

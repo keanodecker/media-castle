@@ -49,8 +49,8 @@ export default function ImpressumPage() {
                 </a>
                 <br />
                 E-Mail:{' '}
-                <a href="mailto:info@keanodecker.com" className="hover:text-primary transition-colors duration-200">
-                  info@keanodecker.com
+                <a href="mailto:info@media-castle.com" className="hover:text-primary transition-colors duration-200">
+                  info@media-castle.com
                 </a>
               </p>
             </section>

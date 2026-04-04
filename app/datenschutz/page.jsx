@@ -39,8 +39,8 @@ export default function DatenschutzPage() {
                 Deutschland<br />
                 <br />
                 E-Mail:{' '}
-                <a href="mailto:info@keanodecker.com" className="hover:text-primary transition-colors duration-200">
-                  info@keanodecker.com
+                <a href="mailto:info@media-castle.com" className="hover:text-primary transition-colors duration-200">
+                  info@media-castle.com
                 </a>
                 <br />
                 Telefon:{' '}
@@ -104,8 +104,8 @@ export default function DatenschutzPage() {
               </ul>
               <p className="mt-4">
                 Zur Ausübung Ihrer Rechte wenden Sie sich bitte an:{' '}
-                <a href="mailto:info@keanodecker.com" className="hover:text-primary transition-colors duration-200">
-                  info@keanodecker.com
+                <a href="mailto:info@media-castle.com" className="hover:text-primary transition-colors duration-200">
+                  info@media-castle.com
                 </a>
               </p>
             </section>
