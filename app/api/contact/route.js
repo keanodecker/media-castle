@@ -1,5 +1,7 @@
 import { NextResponse } from 'next/server';
-import nodemailer from 'nodemailer';
+import { Resend } from 'resend';
+
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(request) {
   try {
@@ -9,37 +11,28 @@ export async function POST(request) {
       return NextResponse.json({ error: 'Alle Felder sind erforderlich.' }, { status: 400 });
     }
 
-    const transporter = nodemailer.createTransport({
-      host: process.env.SMTP_HOST,
-      port: Number(process.env.SMTP_PORT) || 587,
-      secure: process.env.SMTP_SECURE === 'true',
-      auth: {
-        user: process.env.SMTP_USER,
-        pass: process.env.SMTP_PASS,
-      },
-    });
+    const html = `
+      <div style="font-family: sans-serif; max-width: 600px;">
+        <h2 style="color: #0D2144;">Neue Kontaktanfrage</h2>
+        <p><strong>Name:</strong> ${name}</p>
+        <p><strong>E-Mail:</strong> <a href="mailto:${email}">${email}</a></p>
+        <hr style="border-color: #eee;" />
+        <p><strong>Nachricht:</strong></p>
+        <p style="white-space: pre-line;">${message}</p>
+      </div>
+    `;
 
-    await transporter.sendMail({
-      from: `"${name}" <${process.env.SMTP_USER}>`,
-      to: 'info@media-castle.com',
+    await resend.emails.send({
+      from: 'Media Castle <kontakt@media-castle.com>',
+      to: ['info@media-castle.com', 'info@keanodecker.com'],
       replyTo: email,
       subject: `Neue Kontaktanfrage von ${name}`,
-      text: `Name: ${name}\nE-Mail: ${email}\n\nNachricht:\n${message}`,
-      html: `
-        <div style="font-family: sans-serif; max-width: 600px;">
-          <h2 style="color: #0D2144;">Neue Kontaktanfrage</h2>
-          <p><strong>Name:</strong> ${name}</p>
-          <p><strong>E-Mail:</strong> <a href="mailto:${email}">${email}</a></p>
-          <hr style="border-color: #eee;" />
-          <p><strong>Nachricht:</strong></p>
-          <p style="white-space: pre-line;">${message}</p>
-        </div>
-      `,
+      html,
     });
 
     return NextResponse.json({ success: true });
   } catch (error) {
-    console.error('Fehler beim Senden der E-Mail:', error);
+    console.error('Resend Fehler:', error);
     return NextResponse.json({ error: 'E-Mail konnte nicht gesendet werden.' }, { status: 500 });
   }
 }
