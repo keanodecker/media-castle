@@ -9,6 +9,7 @@ import Footer from '@/components/Footer';
 import PartnerLogoBar from '@/components/PartnerLogoBar';
 import FAQAccordion from '@/components/FAQAccordion';
 import LeistungenSection from '@/components/LeistungenSection';
+import { LeverSwitch } from '@/components/ui/lever-switch';
 import { LeistungenButton } from '@/components/ui/leistungen-button';
 
 export default function HomePage() {
@@ -101,11 +102,9 @@ export default function HomePage() {
 
           <FAQAccordion />
 
-          <div className="mt-16 flex flex-col items-center gap-4">
-            <p className="text-secondary">Noch Fragen offen?</p>
-            <Link href="/kontakt" className="btn-outline">
-              Kostenloses Erstgespräch vereinbaren
-            </Link>
+          <div className="mt-16 flex flex-col items-center gap-6">
+            <p className="text-secondary font-medium">Noch Fragen offen?</p>
+            <LeverSwitch />
           </div>
         </div>
       </section>
