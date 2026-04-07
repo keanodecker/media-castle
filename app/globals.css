@@ -116,8 +116,8 @@
 /* ── Lever Switch ─────────────────────────────────────────── */
 .toggle-container {
   position: relative;
-  width: 64px;
-  height: 110px;
+  width: 80px;
+  height: 130px;
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -134,15 +134,16 @@
   margin: 0;
 }
 
-/* Base plate */
+/* Flat base plate */
 .toggle-base {
-  width: 52px;
-  height: 62px;
-  background: linear-gradient(160deg, #1e3a6e 0%, #0d2144 100%);
-  border-radius: 10px;
+  width: 72px;
+  height: 16px;
+  background: linear-gradient(180deg, #c8cdd8 0%, #9aa0b0 40%, #6e7480 100%);
+  border-radius: 4px;
   box-shadow:
-    0 6px 16px rgba(0, 0, 0, 0.45),
-    inset 0 1px 0 rgba(255, 255, 255, 0.12);
+    0 4px 10px rgba(0,0,0,0.45),
+    inset 0 1px 0 rgba(255,255,255,0.35),
+    inset 0 -1px 0 rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -150,59 +151,68 @@
 }
 
 .toggle-base-inside {
-  width: 30px;
-  height: 42px;
-  background: linear-gradient(180deg, #07152e 0%, #0a1e3d 100%);
-  border-radius: 5px;
-  box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.6);
+  width: 14px;
+  height: 10px;
+  background: rgba(0,0,0,0.25);
+  border-radius: 3px;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.5);
 }
 
-/* Handle wrapper — pivot at bottom */
+/* Lever wrapper — pivots from base center */
 .toggle-handle-wrapper {
   position: absolute;
-  bottom: 46px;
+  bottom: 10px;
   left: 50%;
-  transform: translateX(-50%) rotate(-28deg);
+  transform: translateX(-50%) rotate(-30deg);
   transform-origin: 50% 100%;
-  transition: transform 0.35s cubic-bezier(0.34, 1.4, 0.64, 1);
+  transition: transform 0.35s cubic-bezier(0.34, 1.5, 0.64, 1);
 }
 
 .toggle-input:checked ~ .toggle-handle-wrapper {
-  transform: translateX(-50%) rotate(28deg);
+  transform: translateX(-50%) rotate(30deg);
 }
 
 .toggle-handle {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 3px;
+  gap: 0;
 }
 
-/* Knob at top of lever */
+/* Big blue sphere */
 .toggle-handle-knob {
-  width: 20px;
-  height: 20px;
+  width: 34px;
+  height: 34px;
   border-radius: 50%;
-  background: radial-gradient(circle at 35% 30%, #6fa3ff, #2563eb 60%, #1040b0);
+  background: radial-gradient(circle at 35% 28%, #93c5fd, #2563eb 48%, #1040a8 80%);
   box-shadow:
-    0 3px 6px rgba(0, 0, 0, 0.5),
-    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+    0 6px 16px rgba(37, 99, 235, 0.55),
+    inset 0 2px 0 rgba(255,255,255,0.45),
+    inset -2px -3px 6px rgba(0,0,0,0.25);
+  flex-shrink: 0;
 }
 
-/* Lever bar */
+/* Chrome bar */
 .toggle-handle-bar-wrapper {
   display: flex;
   justify-content: center;
+  margin-top: -1px;
 }
 
 .toggle-handle-bar {
-  width: 9px;
-  height: 40px;
-  border-radius: 5px;
-  background: linear-gradient(to right, #b0b8cc, #e8ecf4, #b0b8cc);
+  width: 11px;
+  height: 52px;
+  border-radius: 6px;
+  background: linear-gradient(to right,
+    #8090a8 0%,
+    #c8d4e4 25%,
+    #eef2f8 50%,
+    #c8d4e4 75%,
+    #8090a8 100%
+  );
   box-shadow:
-    2px 2px 6px rgba(0, 0, 0, 0.35),
-    inset 0 1px 0 rgba(255, 255, 255, 0.5);
+    2px 0 6px rgba(0,0,0,0.2),
+    inset 0 1px 0 rgba(255,255,255,0.6);
 }
 /* ───────────────────────────────────────────────────────── */
 
