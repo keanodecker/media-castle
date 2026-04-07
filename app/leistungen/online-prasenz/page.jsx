@@ -4,7 +4,6 @@ import { motion } from 'framer-motion';
 import { Search, TrendingUp, Users, MessageCircle } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import PricingSection from '@/components/PricingSection';
 
 export default function LeistungenOnlinePrasenzPage() {
   return (
@@ -121,8 +120,6 @@ export default function LeistungenOnlinePrasenzPage() {
           </motion.div>
         </div>
       </main>
-
-      <PricingSection />
 
       <Footer />
     </>

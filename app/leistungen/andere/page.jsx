@@ -5,7 +5,6 @@ import { motion } from 'framer-motion';
 import { MapPin, FileText, Palette, CreditCard, Sparkles, HelpCircle, LayoutDashboard, TrendingUp } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import PricingSection from '@/components/PricingSection';
 
 export default function LeistungenAnderePage() {
   const services = [
@@ -121,8 +120,6 @@ export default function LeistungenAnderePage() {
           </motion.div>
         </div>
       </main>
-
-      <PricingSection />
 
       <Footer />
     </>
