@@ -4,7 +4,7 @@ import { Toaster } from 'sonner';
 export const metadata = {
   metadataBase: new URL('https://media-castle.de'),
   title: {
-    default: 'Media Castle',
+    default: 'Media Castle – Rund um Online Präsenz',
     template: '%s | Media Castle',
   },
   description: 'Professionelles Webdesign und Online Marketing für Unternehmen in Lahr und Umgebung. Individuelle Websites, SEO & Social Media — aus einer Hand.',
