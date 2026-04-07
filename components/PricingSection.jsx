@@ -31,6 +31,7 @@ const plans = [
       { label: 'Alles aus Landing Page' },
       { label: 'Erweiterte SEO-Optimierung' },
       { label: 'Individuelle Video- & Medieninhalte auf Anfrage' },
+      { label: 'Integriertes Buchungssystem / Terminsystem' },
       adminDashboardFeature
     ],
     recommended: true

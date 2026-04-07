@@ -5,9 +5,10 @@ const Footer = () => {
 
   const footerLinks = [
     { name: 'Home', path: '/' },
-    { name: 'Leistungen', path: '/leistungen/webdesign' },
+    { name: 'Leistungen', path: '/leistungen' },
     { name: 'Partner', path: '/partner' },
     { name: 'Über uns', path: '/uber-uns' },
+    { name: 'FAQ', path: '/#faq' },
     { name: 'Kontakt', path: '/kontakt' }
   ];
 

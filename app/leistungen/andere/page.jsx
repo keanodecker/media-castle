@@ -2,10 +2,9 @@
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { MapPin, FileText, Palette, CreditCard, Sparkles, HelpCircle, LayoutDashboard } from 'lucide-react';
+import { MapPin, FileText, Palette, CreditCard, Sparkles, HelpCircle, LayoutDashboard, TrendingUp } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import PricingSection from '@/components/PricingSection';
 
 export default function LeistungenAnderePage() {
   const services = [
@@ -33,6 +32,12 @@ export default function LeistungenAnderePage() {
       icon: Sparkles,
       title: 'Logodesign',
       description: 'Kreative Logoentwicklung, die Ihre Marke perfekt repräsentiert'
+    },
+    {
+      icon: TrendingUp,
+      title: 'SEO-Optimierung',
+      description: 'Suchmaschinenoptimierung für bestehende Online-Auftritte — damit Ihr Unternehmen besser gefunden wird.',
+      href: '/leistungen/online-prasenz'
     },
     {
       icon: LayoutDashboard,
@@ -115,8 +120,6 @@ export default function LeistungenAnderePage() {
           </motion.div>
         </div>
       </main>
-
-      <PricingSection />
 
       <Footer />
     </>

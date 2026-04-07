@@ -20,12 +20,6 @@ const partners = [
     name: 'KSL Boxing Lahr',
     logo: '/Logo-Kunden/KSL-Boxing-Logo-Website.png.png',
     delay: 'animation-delay-400'
-  },
-  {
-    name: 'Fußballverein Lahr West',
-    initials: 'FV',
-    color: 'bg-green-600',
-    delay: 'animation-delay-500'
   }
 ];
 
