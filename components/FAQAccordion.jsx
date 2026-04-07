@@ -67,9 +67,14 @@ const faqs = [
   {
     question: 'Wie viel muss ich in mein Projekt investieren?',
     answer: (
-      <p>
-        Wir möchten eine transparente Preisübersicht bieten — deshalb sind alle Kosten für die jeweiligen Dienstleistungen auf den entsprechenden Seiten zu sehen. Wenn Sie sich unsicher sind, welchen Umfang und welche Dienstleistung Sie benötigen, können wir dies in Ruhe in einem Gespräch mit Ihnen durchgehen.
-      </p>
+      <div className="space-y-4">
+        <p>
+          Wir möchten transparent sein – deshalb finden Sie für unsere Webdesign-Pakete eine übersichtliche Preisübersicht auf unserer Website. Bei anderen Dienstleistungen variiert der Umfang zu stark, um einen festen Preis nennen zu können.
+        </p>
+        <p>
+          Sie sind sich noch nicht sicher, was Sie benötigen? Kein Problem – das können wir in Ruhe in einem Gespräch besprechen.
+        </p>
+      </div>
     )
   }
 ];
