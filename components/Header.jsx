@@ -104,6 +104,10 @@ const Header = () => {
                 ) : (
                   <Link
                     href={link.path}
+                    onClick={link.path === '/#faq' ? (e) => {
+                      const el = document.getElementById('faq');
+                      if (el) { e.preventDefault(); el.scrollIntoView({ behavior: 'smooth' }); }
+                    } : undefined}
                     className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
                       isActive(link.path)
                         ? 'text-primary'
@@ -198,6 +202,10 @@ const Header = () => {
                   ) : (
                     <Link
                       href={link.path}
+                      onClick={link.path === '/#faq' ? (e) => {
+                        const el = document.getElementById('faq');
+                        if (el) { e.preventDefault(); el.scrollIntoView({ behavior: 'smooth' }); setIsMobileMenuOpen(false); }
+                      } : undefined}
                       className={`block py-4 font-medium text-lg transition-colors duration-200 ${
                         isActive(link.path)
                           ? 'text-primary'
