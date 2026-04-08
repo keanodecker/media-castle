@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import LeverSwitch from '@/components/ui/lever-switch';
 
 export default function PartnerPage() {
   const clients = [
@@ -135,9 +136,9 @@ export default function PartnerPage() {
                 Werden Sie Teil unserer Erfolgsgeschichten. Lassen Sie uns gemeinsam herausfinden,
                 wie wir Ihre digitale Präsenz auf das nächste Level heben können.
               </p>
-              <a href="/kontakt" className="btn-primary">
-                Kostenloses Erstgespräch
-              </a>
+              <div className="flex justify-center">
+                <LeverSwitch />
+              </div>
             </div>
           </motion.div>
         </div>
