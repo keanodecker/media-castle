@@ -27,7 +27,7 @@ export default function HomePage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-secondary pt-20">
+      <section data-dark-hero className="relative min-h-screen flex items-center justify-center overflow-hidden bg-secondary pt-20">
         {/* Animated Gradient Mesh Background */}
         <div className="absolute inset-0 opacity-30">
           <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary rounded-full mix-blend-multiply filter blur-3xl animate-blob" />
