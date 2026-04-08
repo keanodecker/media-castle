@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import LeverSwitch from '@/components/ui/lever-switch';
+import { LeverSwitch } from '@/components/ui/lever-switch';
 
 export default function PartnerPage() {
   const clients = [
@@ -35,7 +35,7 @@ export default function PartnerPage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 bg-secondary overflow-hidden">
+      <section data-dark-hero className="relative pt-32 pb-20 bg-secondary overflow-hidden">
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary rounded-full mix-blend-multiply filter blur-3xl" />
           <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-accent rounded-full mix-blend-multiply filter blur-3xl" />

@@ -8,17 +8,26 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [hasDarkHero, setHasDarkHero] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isLeistungenOpen, setIsLeistungenOpen] = useState(false);
   const pathname = usePathname();
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > window.innerHeight * 0.75);
+    const checkPosition = () => {
+      const heroEl = document.querySelector('[data-dark-hero]');
+      if (heroEl) {
+        setHasDarkHero(true);
+        setIsScrolled(heroEl.getBoundingClientRect().bottom < 80);
+      } else {
+        setHasDarkHero(false);
+        setIsScrolled(false);
+      }
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    checkPosition();
+    window.addEventListener('scroll', checkPosition, { passive: true });
+    return () => window.removeEventListener('scroll', checkPosition);
+  }, [pathname]);
 
   useEffect(() => {
     setIsMobileMenuOpen(false);
@@ -47,8 +56,7 @@ const Header = () => {
     return pathname.startsWith(path);
   };
 
-  const isDarkHeroPage = pathname === '/' || pathname === '/partner';
-  const useLightText = isDarkHeroPage && !isScrolled;
+  const useLightText = hasDarkHero && !isScrolled;
 
   return (
     <header className="fixed top-4 left-0 right-0 z-50 px-4 sm:px-6 lg:px-8 transition-all duration-300">
