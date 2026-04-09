@@ -7,7 +7,8 @@ export function LeverSwitch() {
   const router = useRouter();
   const [checked, setChecked] = useState(false);
 
-  const handleChange = () => {
+  const handleTap = () => {
+    if (checked) return;
     setChecked(true);
     setTimeout(() => router.push('/kontakt'), 400);
   };
@@ -15,13 +16,14 @@ export function LeverSwitch() {
   return (
     <div className="flex flex-col items-center gap-4">
       <p className="text-sm text-muted-foreground">Hebel umlegen zum Starten</p>
-      <div className="toggle-container">
-        <input
-          className="toggle-input"
-          type="checkbox"
-          checked={checked}
-          onChange={handleChange}
-        />
+      {/* Use a real button so touch events work on all mobile browsers */}
+      <button
+        type="button"
+        aria-label="Zum Kontakt navigieren"
+        onClick={handleTap}
+        className={`toggle-container${checked ? ' is-checked' : ''}`}
+        style={{ background: 'none', border: 'none', padding: 0 }}
+      >
         <div className="toggle-handle-wrapper">
           <div className="toggle-handle">
             <div className="toggle-handle-knob" />
@@ -33,7 +35,7 @@ export function LeverSwitch() {
         <div className="toggle-base">
           <div className="toggle-base-inside" />
         </div>
-      </div>
+      </button>
     </div>
   );
 }

@@ -125,15 +125,6 @@
   justify-content: flex-end;
 }
 
-.toggle-input {
-  position: absolute;
-  inset: 0;
-  opacity: 0;
-  cursor: pointer;
-  z-index: 10;
-  margin: 0;
-}
-
 /* Flat base plate */
 .toggle-base {
   width: 72px;
@@ -168,7 +159,7 @@
   transition: transform 0.35s cubic-bezier(0.34, 1.5, 0.64, 1);
 }
 
-.toggle-input:checked ~ .toggle-handle-wrapper {
+.toggle-container.is-checked .toggle-handle-wrapper {
   transform: translateX(-50%) rotate(30deg);
 }
 
