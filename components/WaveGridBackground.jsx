@@ -3,7 +3,7 @@
 import { useEffect, useRef } from 'react';
 
 // Perspective wave-grid canvas animation.
-// Blue lines on transparent background, waves travel toward the viewer.
+// Sporadic localized wave packets travel from horizon toward viewer.
 export default function WaveGridBackground() {
   const canvasRef = useRef(null);
 
@@ -13,11 +13,30 @@ export default function WaveGridBackground() {
 
     const ctx = canvas.getContext('2d');
 
-    const COLS = 22;        // vertical lines (left-right)
-    const ROWS = 28;        // horizontal lines (depth)
-    const WAVE_FREQ = 0.55; // how many wave crests fit in the grid
-    const WAVE_SPEED = 0.018; // animation speed — keep slow for calm feel
-    const LINE_COLOR = '37, 99, 235'; // rgb for primary blue
+    // ── grid config ───────────────────────────────────────────────────────
+    const COLS = 36;         // more columns → smaller squares
+    const ROWS = 44;         // more rows    → smaller squares
+    const WAVE_FREQ  = 0.65; // spatial frequency of each wave packet
+    const WAVE_SPEED = 0.004; // much slower base speed
+    const LINE_COLOR = '37, 99, 235';
+
+    // ── wave packets ──────────────────────────────────────────────────────
+    // Each packet is a localized wave at a certain X position.
+    // The amplitude oscillates slowly so packets appear and fade independently,
+    // giving the "wave from left, then from right, nothing in the middle" feel.
+    const PACKETS = [
+      // left side
+      { centerFrac: 0.18, sigmaFrac: 0.11, speedMult: 1.0,  ampPhaseOffset: 0,              ampFreq: 0.0018 },
+      // right side
+      { centerFrac: 0.82, sigmaFrac: 0.11, speedMult: 0.85, ampPhaseOffset: Math.PI * 1.3,  ampFreq: 0.0014 },
+      // occasional center-left
+      { centerFrac: 0.38, sigmaFrac: 0.08, speedMult: 1.15, ampPhaseOffset: Math.PI * 0.7,  ampFreq: 0.0022 },
+      // occasional center-right
+      { centerFrac: 0.65, sigmaFrac: 0.08, speedMult: 0.9,  ampPhaseOffset: Math.PI * 1.9,  ampFreq: 0.0017 },
+    ];
+
+    // Each packet tracks its own wave phase (advances each frame)
+    const phases = PACKETS.map(() => Math.random() * Math.PI * 2);
 
     let animId = null;
     let running = false;
@@ -26,37 +45,52 @@ export default function WaveGridBackground() {
     // ── resize ────────────────────────────────────────────────────────────
     function resize() {
       const rect = canvas.getBoundingClientRect();
-      canvas.width = rect.width;
+      canvas.width  = rect.width;
       canvas.height = rect.height;
     }
 
-    // ── project a grid point to screen coords ─────────────────────────────
-    // gx: 0 … COLS   (left to right)
-    // gz: 0 … ROWS   (gz=0 near/bottom, gz=ROWS far/horizon)
-    // Returns { x, y, alpha }
+    // ── total wave displacement at grid point (gx, gz) ────────────────────
+    function waveAt(gx, gz) {
+      let total = 0;
+      for (let i = 0; i < PACKETS.length; i++) {
+        const p = PACKETS[i];
+        const centerGx = p.centerFrac * COLS;
+        const sigma    = p.sigmaFrac  * COLS;
+        const dx       = gx - centerGx;
+
+        // Gaussian envelope in X — packet is localized around centerGx
+        const envelope = Math.exp(-(dx * dx) / (2 * sigma * sigma));
+
+        // Slowly oscillating amplitude: packet fades in/out over time
+        // Each packet has a different offset so they're never all active at once
+        const amp = 0.5 + 0.5 * Math.sin(time * p.ampFreq * 2 * Math.PI + p.ampPhaseOffset);
+
+        // Wave travels toward viewer (phase increases → crest at smaller gz)
+        total += amp * envelope * Math.sin(gz * WAVE_FREQ + phases[i]);
+      }
+      return total;
+    }
+
+    // ── project grid point (gx, gz) to screen ────────────────────────────
     function project(gx, gz) {
       const W = canvas.width;
       const H = canvas.height;
 
-      const HORIZON_Y = H * 0.05;   // vanishing point near top
+      const HORIZON_Y = H * 0.05;
       const CENTER_X  = W / 2;
 
-      // Perspective factor: 0 at far (horizon), 1 at near (bottom)
-      const t = gz / ROWS;
-      const persp = t * t;           // quadratic — compresses distant rows naturally
+      // Perspective: gz=0 near (bottom), gz=ROWS far (horizon)
+      const t     = gz / ROWS;
+      const persp = t * t;           // quadratic compression
 
-      // Wave travels toward viewer: sin(gz * freq + time) → crest moves to smaller gz
-      const amp     = H * 0.042;
-      const waveMix = 0.15 + 0.85 * t; // waves slightly visible at far end too
-      const waveY   = amp * Math.sin(gz * WAVE_FREQ + time) * waveMix;
+      const baseAmp  = H * 0.04;
+      const waveMix  = 0.12 + 0.88 * t;
+      const waveY    = baseAmp * waveAt(gx, gz) * waveMix;
 
       const sx = CENTER_X + (gx - COLS / 2) / COLS * W * 1.35 * persp;
       const sy = HORIZON_Y + (H - HORIZON_Y) * persp - waveY;
 
-      // Far lines are nearly invisible; near lines are solid
-      const alpha = 0.06 + 0.64 * t;
-
-      return { x: sx, y: sy, alpha };
+      return { x: sx, y: sy };
     }
 
     // ── draw one frame ────────────────────────────────────────────────────
@@ -65,28 +99,28 @@ export default function WaveGridBackground() {
       const H = canvas.height;
       ctx.clearRect(0, 0, W, H);
 
-      // Horizontal lines — constant gz, vary gx
+      // Horizontal lines (rows — these show the wave shape)
       for (let gz = 1; gz <= ROWS; gz++) {
+        const depthAlpha = 0.06 + 0.62 * (gz / ROWS);
         ctx.beginPath();
         for (let gx = 0; gx <= COLS; gx++) {
           const p = project(gx, gz);
           gx === 0 ? ctx.moveTo(p.x, p.y) : ctx.lineTo(p.x, p.y);
         }
-        const a = 0.07 + 0.63 * (gz / ROWS);
-        ctx.strokeStyle = `rgba(${LINE_COLOR}, ${a})`;
-        ctx.lineWidth = 0.9;
+        ctx.strokeStyle = `rgba(${LINE_COLOR}, ${depthAlpha})`;
+        ctx.lineWidth = 0.8;
         ctx.stroke();
       }
 
-      // Vertical lines — constant gx, vary gz (far → near)
+      // Vertical lines (columns — connect rows, make the grid squares)
       for (let gx = 0; gx <= COLS; gx++) {
         ctx.beginPath();
         for (let gz = 0; gz <= ROWS; gz++) {
           const p = project(gx, gz);
           gz === 0 ? ctx.moveTo(p.x, p.y) : ctx.lineTo(p.x, p.y);
         }
-        ctx.strokeStyle = `rgba(${LINE_COLOR}, 0.18)`;
-        ctx.lineWidth = 0.7;
+        ctx.strokeStyle = `rgba(${LINE_COLOR}, 0.15)`;
+        ctx.lineWidth = 0.6;
         ctx.stroke();
       }
     }
@@ -95,40 +129,30 @@ export default function WaveGridBackground() {
     function loop() {
       if (!running) return;
       draw();
-      time += WAVE_SPEED;
+      // Advance each packet's wave phase independently
+      for (let i = 0; i < PACKETS.length; i++) {
+        phases[i] += WAVE_SPEED * PACKETS[i].speedMult;
+      }
+      time++;
       animId = requestAnimationFrame(loop);
     }
 
-    function start() {
-      if (running) return;
-      running = true;
-      loop();
-    }
+    function start() { if (running) return; running = true; loop(); }
+    function stop()  { running = false; if (animId) { cancelAnimationFrame(animId); animId = null; } }
 
-    function stop() {
-      running = false;
-      if (animId) { cancelAnimationFrame(animId); animId = null; }
-    }
-
-    // Pause when scrolled off-screen (saves CPU/GPU)
     const observer = new IntersectionObserver(
       ([entry]) => { entry.isIntersecting ? start() : stop(); },
       { threshold: 0 }
     );
     observer.observe(canvas);
 
-    // Keep canvas sized to its CSS box
-    const ro = new ResizeObserver(() => { resize(); });
+    const ro = new ResizeObserver(resize);
     ro.observe(canvas);
 
     resize();
     start();
 
-    return () => {
-      stop();
-      observer.disconnect();
-      ro.disconnect();
-    };
+    return () => { stop(); observer.disconnect(); ro.disconnect(); };
   }, []);
 
   return (
