@@ -6,9 +6,8 @@ import { motion } from 'framer-motion';
 import { Sparkles } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import PartnerLogoBar from '@/components/PartnerLogoBar';
 import FAQAccordion from '@/components/FAQAccordion';
-import LeistungenSection from '@/components/LeistungenSection';
+import ScrollRevealLeistungen from '@/components/ScrollRevealLeistungen';
 import { LeverSwitch } from '@/components/ui/lever-switch';
 import { LeistungenButton } from '@/components/ui/leistungen-button';
 
@@ -74,21 +73,10 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Partner Logo Bar */}
-      <PartnerLogoBar />
-
-      {/* Leistungen Section */}
-      <section id="leistungen" className="py-24 bg-background">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="mb-4 text-secondary">Unsere Leistungen</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Alles, was Sie für eine starke digitale Präsenz benötigen — aus einer Hand.
-            </p>
-          </div>
-          <LeistungenSection />
-        </div>
-      </section>
+      {/* Scroll-reveal leistungen */}
+      <div id="leistungen">
+        <ScrollRevealLeistungen />
+      </div>
 
       {/* FAQ Section */}
       <section id="faq" className="py-24 bg-muted/30">
