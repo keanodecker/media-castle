@@ -7,7 +7,7 @@ import { Sparkles } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import FAQAccordion from '@/components/FAQAccordion';
-import ScrollRevealLeistungen from '@/components/ScrollRevealLeistungen';
+import LeistungenSection from '@/components/LeistungenSection';
 import { LeverSwitch } from '@/components/ui/lever-switch';
 import { LeistungenButton } from '@/components/ui/leistungen-button';
 
@@ -73,10 +73,35 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Scroll-reveal leistungen */}
-      <div id="leistungen">
-        <ScrollRevealLeistungen />
-      </div>
+      {/* Leistungen Section */}
+      <section id="leistungen" className="relative py-24 bg-background overflow-hidden">
+        {/* Top vignette — blurs content scrolling out the top */}
+        <div
+          className="pointer-events-none absolute top-0 left-0 right-0 z-10"
+          style={{
+            height: '160px',
+            background: 'linear-gradient(to bottom, hsl(var(--background)) 0%, transparent 100%)',
+          }}
+        />
+        {/* Bottom vignette */}
+        <div
+          className="pointer-events-none absolute bottom-0 left-0 right-0 z-10"
+          style={{
+            height: '160px',
+            background: 'linear-gradient(to top, hsl(var(--background)) 0%, transparent 100%)',
+          }}
+        />
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="mb-4 text-secondary">Unsere Leistungen</h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Alles, was Sie für eine starke digitale Präsenz benötigen — aus einer Hand.
+            </p>
+          </div>
+          <LeistungenSection />
+        </div>
+      </section>
 
       {/* FAQ Section */}
       <section id="faq" className="py-24 bg-muted/30">
