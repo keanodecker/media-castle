@@ -8,6 +8,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import FAQAccordion from '@/components/FAQAccordion';
 import LeistungenSection from '@/components/LeistungenSection';
+import WaveGridBackground from '@/components/WaveGridBackground';
 import { LeverSwitch } from '@/components/ui/lever-switch';
 import { LeistungenButton } from '@/components/ui/leistungen-button';
 
@@ -104,8 +105,9 @@ export default function HomePage() {
       </section>
 
       {/* FAQ Section */}
-      <section id="faq" className="py-24 bg-muted/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="faq" className="relative py-24 bg-muted/30 overflow-hidden">
+        <WaveGridBackground />
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="mb-4 text-secondary">Häufig gestellte Fragen</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
