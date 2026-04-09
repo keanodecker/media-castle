@@ -1,13 +1,20 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 // Perspective wave-grid canvas animation.
 // Sporadic localized wave packets travel from horizon toward viewer.
+// Hidden on mobile (<768px).
 export default function WaveGridBackground() {
   const canvasRef = useRef(null);
+  const [isMobile, setIsMobile] = useState(true); // default true → no flash on mobile SSR
 
   useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < 768);
+    check();
+    window.addEventListener('resize', check);
+    return () => window.removeEventListener('resize', check);
+  }, []);
     const canvas = canvasRef.current;
     if (!canvas) return;
 
@@ -153,7 +160,9 @@ export default function WaveGridBackground() {
     start();
 
     return () => { stop(); observer.disconnect(); ro.disconnect(); };
-  }, []);
+  }, [isMobile]);
+
+  if (isMobile) return null;
 
   return (
     <canvas
