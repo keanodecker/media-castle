@@ -12,21 +12,33 @@ export default function PartnerPage() {
       name: 'Cesar Sicherheit',
       logo: '/Logo-Kunden/Cesarsicherheit-Logo-Website.png.png',
       services: ['Website Design', 'Flyer', 'Visitenkarten'],
+      status: 'online',
     },
     {
       name: 'Cesar Dienstleistungen',
       logo: '/Logo-Kunden/Cesar_Dienstleistungen-Logo-Website.png',
       services: ['Website Design', 'Flyer', 'Visitenkarten'],
+      status: 'online',
     },
     {
       name: 'Ballonkunst Lahr',
       logo: '/Logo-Kunden/Ballongkunst_Lahr-Logo-Website.png.png',
       services: ['Website Design'],
+      status: 'wip',
     },
     {
       name: 'KSL Boxing Lahr',
       logo: '/Logo-Kunden/KSL-Boxing-Logo-Website.png.png',
       services: ['Website Design', 'Social Media Management'],
+      status: 'online',
+    },
+    {
+      name: 'Fussballverein Lahr West',
+      logo: '/Logo-Kunden/FV-Lahr-West-Logo.png',
+      services: ['Website Design'],
+      status: 'wip',
+      initials: 'FLW',
+      color: 'bg-green-700',
     },
   ];
 
@@ -93,7 +105,21 @@ export default function PartnerPage() {
 
                   {/* Content */}
                   <div className="flex-1">
-                    <h2 className="text-2xl md:text-3xl font-bold text-secondary mb-4">{client.name}</h2>
+                    <div className="flex items-center gap-3 mb-4 flex-wrap">
+                      <h2 className="text-2xl md:text-3xl font-bold text-secondary">{client.name}</h2>
+                      {client.status === 'online' && (
+                        <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-green-50 text-green-700 border border-green-200 select-none">
+                          <span className="w-2 h-2 rounded-full bg-green-500 inline-block" />
+                          Online
+                        </span>
+                      )}
+                      {client.status === 'wip' && (
+                        <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-gray-100 text-gray-500 border border-gray-200 select-none">
+                          <span className="w-2 h-2 rounded-full bg-gray-400 inline-block" />
+                          In Bearbeitung
+                        </span>
+                      )}
+                    </div>
 
                     <div className="mb-6">
                       <h4 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-3">
