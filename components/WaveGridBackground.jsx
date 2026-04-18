@@ -94,7 +94,12 @@ export default function WaveGridBackground() {
       const waveMix  = 0.12 + 0.88 * t;
       const waveY    = baseAmp * waveAt(gx, gz) * waveMix;
 
-      const sx = CENTER_X + (gx - COLS / 2) / COLS * W * 1.35 * persp;
+      // MIN_SPREAD: at the far end (gz≈0) rows are still this wide.
+      // 0 = all converge to a point (old behaviour), 0.55 = flat wide top.
+      const MIN_SPREAD = 0.55;
+      const spread = MIN_SPREAD + (1 - MIN_SPREAD) * persp;
+
+      const sx = CENTER_X + (gx - COLS / 2) / COLS * W * 1.3 * spread;
       const sy = HORIZON_Y + (H - HORIZON_Y) * persp - waveY;
 
       return { x: sx, y: sy };
