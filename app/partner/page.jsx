@@ -30,7 +30,7 @@ export default function PartnerPage() {
       name: 'KSL Boxing Lahr',
       logo: '/Logo-Kunden/KSL-Boxing-Logo-Website.png.png',
       services: ['Website Design', 'Social Media Management'],
-      status: 'online',
+      status: 'wip',
     },
     {
       name: 'Fussballverein Lahr West',
