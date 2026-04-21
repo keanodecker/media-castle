@@ -34,11 +34,9 @@ export default function PartnerPage() {
     },
     {
       name: 'Fussballverein Lahr West',
-      logo: '/Logo-Kunden/FV-Lahr-West-Logo.png',
+      logo: '/Logo-Kunden/Logos.png',
       services: ['Website Design'],
       status: 'wip',
-      initials: 'FLW',
-      color: 'bg-green-700',
     },
   ];
 
