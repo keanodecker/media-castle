@@ -17,6 +17,7 @@ import {
 } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import { LeverSwitch } from '@/components/ui/lever-switch';
 
 export default function LeistungenAutomationPage() {
   const services = [
@@ -134,9 +135,7 @@ export default function LeistungenAutomationPage() {
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-10">
               Wir richten Ihnen intelligente Automatisierungen ein, die wiederkehrende Aufgaben im Hintergrund erledigen — damit Sie Ihre Zeit für Ihre Gäste, Ihre Patienten oder Ihre Kunden nutzen können.
             </p>
-            <Link href="/kontakt" className="btn-primary">
-              Kostenloses Erstgespräch
-            </Link>
+            <LeverSwitch />
           </motion.div>
 
           {/* Einleitungs-Block */}
