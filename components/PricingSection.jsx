@@ -10,6 +10,7 @@ const plans = [
   {
     name: 'Landing Page',
     price: '700',
+    prefix: 'ab ',
     monthly: '50',
     description: 'Perfekt für den professionellen Start im Netz.',
     features: [
@@ -25,6 +26,7 @@ const plans = [
   {
     name: 'Landing Page Plus',
     price: '1.150',
+    prefix: 'ab ',
     monthly: '70',
     description: 'Erweiterte Funktionen für mehr Reichweite.',
     features: [
@@ -97,7 +99,7 @@ const PricingSection = () => {
                 </div>
               </div>
 
-              <ul className="space-y-4 mb-8">
+              <ul className="space-y-4 mb-6">
                 {plan.features.map((feature, fIndex) => (
                   <li key={fIndex} className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
@@ -115,14 +117,26 @@ const PricingSection = () => {
                 ))}
               </ul>
 
-              <Link
-                href="/kontakt"
-                className={`w-full flex justify-center ${
-                  plan.recommended ? 'btn-primary' : 'btn-outline'
-                }`}
-              >
-                Kostenloses Erstgespräch
-              </Link>
+              <p className="text-xs text-muted-foreground leading-relaxed mb-6">
+                Endpreis abhängig vom konkreten Projektumfang. Für ein verbindliches Angebot vereinbaren Sie gerne ein kostenloses Erstgespräch.
+              </p>
+
+              <div className="flex flex-col gap-3">
+                <Link
+                  href="/kontakt"
+                  className={`w-full flex justify-center ${
+                    plan.recommended ? 'btn-primary' : 'btn-outline'
+                  }`}
+                >
+                  Kostenloses Erstgespräch
+                </Link>
+                <Link
+                  href="/kontakt"
+                  className="w-full text-center text-sm font-medium text-primary hover:text-primary/80 transition-colors duration-200 underline underline-offset-4"
+                >
+                  Individuelles Angebot anfragen
+                </Link>
+              </div>
             </div>
           ))}
         </div>

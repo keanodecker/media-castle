@@ -65,16 +65,11 @@ const faqs = [
     )
   },
   {
-    question: 'Wie viel muss ich in mein Projekt investieren?',
+    question: 'Was kostet eine Website bei Media Castle?',
     answer: (
-      <div className="space-y-4">
-        <p>
-          Wir möchten transparent sein – deshalb finden Sie für unsere Webdesign-Pakete eine übersichtliche Preisübersicht auf unserer Website. Bei anderen Dienstleistungen variiert der Umfang zu stark, um einen festen Preis nennen zu können.
-        </p>
-        <p>
-          Sie sind sich noch nicht sicher, was Sie benötigen? Kein Problem – das können wir in Ruhe in einem Gespräch besprechen.
-        </p>
-      </div>
+      <p>
+        Wir nennen auf unserer Seite Richtwerte, ab welchem Betrag ein Projekt startet, da jedes Vorhaben individuell ist. Faktoren wie Seitenzahl, Funktionen (z.B. Buchungssystem, Mehrsprachigkeit, Online-Shop), Bildmaterial und gewünschter Pflegeumfang beeinflussen den Endpreis. Im kostenlosen Erstgespräch nehmen wir uns Zeit, Ihre Vorstellungen genau zu verstehen, und erstellen Ihnen anschließend ein transparentes, schriftliches Festpreis-Angebot — ohne versteckte Kosten.
+      </p>
     )
   }
 ];

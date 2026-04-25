@@ -42,7 +42,7 @@ const Header = () => {
       dropdown: [
         { name: 'Webdesign', path: '/leistungen/webdesign' },
         { name: 'Online Präsenz', path: '/leistungen/online-prasenz' },
-        { name: 'Andere', path: '/leistungen/andere' }
+        { name: 'Automation', path: '/leistungen/automation' }
       ]
     },
     { name: 'Partner', path: '/partner' },
