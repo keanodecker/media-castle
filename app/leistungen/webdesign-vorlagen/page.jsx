@@ -12,7 +12,7 @@ const templates = [
     label: 'Fine Dining · Gehobene Küche',
     description:
       'Elegantes Design für Restaurants im gehobenen Segment. Dunkle, atmosphärische Optik mit goldenen Akzenten — ideal für Betriebe, die Stil und Exklusivität vermitteln möchten.',
-    path: '/leistungen/webdesign-vorlagen/bella-vista',
+    path: 'https://vorlage-restaurante.vercel.app',
     gradient: 'linear-gradient(135deg, #1a0d05 0%, #2d1507 35%, #4a2010 65%, #1f0e06 100%)',
     accentColor: '#c9a84c',
     tag: 'Dunkel & Elegant',
@@ -23,7 +23,7 @@ const templates = [
     label: 'Bistro · Casual Dining',
     description:
       'Frisches, einladendes Design für moderne Bistros und Gasthäuser. Helle, warme Optik mit grünen Akzenten — ideal für Betriebe, die Authentizität und Nahbarkeit ausdrücken möchten.',
-    path: '/leistungen/webdesign-vorlagen/stadtkueche',
+    path: 'https://vorlage-2-restaurante.vercel.app',
     gradient: 'linear-gradient(135deg, #e8f5e9 0%, #f5f0e8 40%, #fef9ec 100%)',
     accentColor: '#2d7a4f',
     tag: 'Hell & Einladend',
@@ -147,13 +147,15 @@ export default function WebdesignVorlagenPage() {
                     </div>
                   </div>
 
-                  <Link
+                  <a
                     href={tpl.path}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="btn-primary w-full flex items-center justify-center gap-2"
                   >
                     <ExternalLink className="w-4 h-4" />
                     Vorlage ansehen
-                  </Link>
+                  </a>
                 </div>
               </motion.div>
             ))}
