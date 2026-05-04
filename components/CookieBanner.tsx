@@ -280,7 +280,16 @@ export default function CookieBanner() {
 
       {/* Banner */}
       {visible && !showConfigure && (
-        <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-[9997] w-[calc(100vw-2rem)] max-w-sm">
+        <div
+          className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-[9997] w-[calc(100vw-2rem)] max-w-sm"
+          style={{ animation: 'cookieBannerSlideIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards' }}
+        >
+          <style>{`
+            @keyframes cookieBannerSlideIn {
+              from { opacity: 0; transform: translateY(40px); }
+              to { opacity: 1; transform: translateY(0); }
+            }
+          `}</style>
           <div className="bg-white border border-border rounded-3xl shadow-2xl p-5">
             <p className="font-semibold text-secondary mb-2 text-sm">
               Diese Website verwendet Cookies
