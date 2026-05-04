@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import CookieSettingsLink from '@/components/CookieSettingsLink';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -80,6 +81,7 @@ const Footer = () => {
             <Link href="/impressum" className="hover:text-white transition-colors duration-200">
               Impressum
             </Link>
+            <CookieSettingsLink />
           </div>
         </div>
       </div>
