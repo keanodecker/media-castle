@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import { Eye } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { LeverSwitch } from '@/components/ui/lever-switch';
@@ -13,30 +14,35 @@ export default function PartnerPage() {
       logo: '/Logo-Kunden/Cesarsicherheit-Logo-Website.png.png',
       services: ['Website Design', 'Flyer', 'Visitenkarten'],
       status: 'online',
+      website: 'https://cesarsicherheit.de',
     },
     {
       name: 'Cesar Dienstleistungen',
       logo: '/Logo-Kunden/Cesar_Dienstleistungen-Logo-Website.png',
       services: ['Website Design', 'Flyer', 'Visitenkarten'],
       status: 'online',
+      website: 'https://cesardienstleistungen.de',
     },
     {
       name: 'Ballonkunst Lahr',
       logo: '/Logo-Kunden/Ballongkunst_Lahr-Logo-Website.png.png',
       services: ['Website Design'],
       status: 'online',
+      website: 'https://ballonkunst-lahr.de',
     },
     {
       name: 'KSL Boxing Lahr',
       logo: '/Logo-Kunden/KSL-Boxing-Logo-Website.png.png',
       services: ['Website Design', 'Social Media Management'],
       status: 'online',
+      website: 'https://ksl-boxing.com',
     },
     {
       name: 'Fussballverein Lahr West',
       logo: '/Logo-Kunden/Logos.png',
       services: ['Website Design'],
       status: 'online',
+      website: 'https://fclahrwest.de',
     },
   ];
 
@@ -116,6 +122,18 @@ export default function PartnerPage() {
                           <span className="w-2 h-2 rounded-full bg-gray-400 inline-block" />
                           In Bearbeitung
                         </span>
+                      )}
+                      {client.status === 'online' && client.website && (
+                        <a
+                          href={client.website}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label={`Website von ${client.name} besuchen`}
+                          className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-primary/10 text-primary border border-primary/20 hover:bg-primary hover:text-white transition-colors duration-200"
+                        >
+                          <Eye className="w-3.5 h-3.5" />
+                          Website ansehen
+                        </a>
                       )}
                     </div>
 
