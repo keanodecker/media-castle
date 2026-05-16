@@ -95,13 +95,13 @@ export default function KontaktPage() {
     <>
       <Header />
 
-      <main className="pt-32 pb-20 bg-background">
+      <main className="pt-32 pb-10 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-16"
+            className="text-center mb-8"
           >
             <h1 className="mb-6 text-secondary">Kontakt</h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -110,7 +110,7 @@ export default function KontaktPage() {
           </motion.div>
 
           {/* Process Section — Sticky Scroll-Animation */}
-          <div className="mb-4">
+          <div className="mb-2">
             <div ref={processRef} className="relative md:h-[130vh]">
               <div className="md:sticky md:top-0 md:h-screen md:flex md:items-center">
                 <div className="w-full">
