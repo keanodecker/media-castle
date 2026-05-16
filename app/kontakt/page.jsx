@@ -1,7 +1,7 @@
 'use client';
 
-import { useState } from 'react';
-import { motion } from 'framer-motion';
+import { useRef, useState } from 'react';
+import { motion, useScroll, useTransform, useMotionValueEvent } from 'framer-motion';
 import { Mail, MapPin, Send, Phone } from 'lucide-react';
 import { toast } from 'sonner';
 import Header from '@/components/Header';
@@ -14,6 +14,21 @@ export default function KontaktPage() {
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const processRef = useRef(null);
+  const { scrollYProgress: processScroll } = useScroll({
+    target: processRef,
+    offset: ['start 85%', 'center 55%'],
+  });
+  const lineScale = useTransform(processScroll, [0, 1], [0, 1]);
+  const [activeStep, setActiveStep] = useState(-1);
+  useMotionValueEvent(processScroll, 'change', (latest) => {
+    if (latest >= 0.95) setActiveStep(3);
+    else if (latest >= 0.66) setActiveStep(2);
+    else if (latest >= 0.33) setActiveStep(1);
+    else if (latest > 0.02) setActiveStep(0);
+    else setActiveStep(-1);
+  });
 
   const handleChange = (e) => {
     setFormData({
@@ -102,22 +117,36 @@ export default function KontaktPage() {
             className="mb-24"
           >
             <h2 className="text-center mb-12 text-secondary">So arbeiten wir zusammen</h2>
-            <div className="relative">
-              {/* Connecting Line (Desktop) */}
-              <div className="hidden md:block absolute top-8 left-[10%] right-[10%] h-0.5 bg-border z-0" />
+            <div ref={processRef} className="relative">
+              {/* Connecting Line (Desktop) — Hintergrund */}
+              <div className="hidden md:block absolute top-8 left-[10%] right-[10%] h-1 bg-border rounded-full z-0" />
+              {/* Connecting Line (Desktop) — blaue Progress-Fuellung */}
+              <motion.div
+                className="hidden md:block absolute top-8 left-[10%] right-[10%] h-1 bg-primary rounded-full z-0 origin-left"
+                style={{ scaleX: lineScale }}
+              />
 
               <div className="grid md:grid-cols-4 gap-8 relative z-10">
-                {processSteps.map((step, index) => (
-                  <div key={index} className="flex flex-col items-center text-center">
-                    <div className="w-16 h-16 bg-white border-2 border-primary rounded-full flex items-center justify-center text-2xl mb-6 shadow-sm">
-                      {step.icon}
+                {processSteps.map((step, index) => {
+                  const isActive = activeStep >= index;
+                  return (
+                    <div key={index} className="flex flex-col items-center text-center">
+                      <div
+                        className={`w-16 h-16 rounded-full flex items-center justify-center text-2xl mb-6 shadow-sm transition-colors duration-300 ${
+                          isActive
+                            ? 'bg-primary border-2 border-primary text-white'
+                            : 'bg-white border-2 border-primary text-secondary'
+                        }`}
+                      >
+                        {step.icon}
+                      </div>
+                      <h3 className="text-lg font-bold text-secondary mb-3">{index + 1}. {step.title}</h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed">
+                        {step.description}
+                      </p>
                     </div>
-                    <h3 className="text-lg font-bold text-secondary mb-3">{index + 1}. {step.title}</h3>
-                    <p className="text-sm text-muted-foreground leading-relaxed">
-                      {step.description}
-                    </p>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             </div>
           </motion.div>
