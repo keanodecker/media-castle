@@ -14,6 +14,7 @@ const partners = [
 
 const LeistungenSection = () => {
   return (
+    <>
     <div className="space-y-6">
 
       {/* Webdesign — volle Breite */}
@@ -148,54 +149,55 @@ const LeistungenSection = () => {
         </div>
       </div>
 
-      {/* Unsere Partner */}
-      <div className="card-clean">
-        <div className="text-center mb-10">
-          <span className="inline-block text-sm font-semibold uppercase tracking-widest text-primary mb-4">
-            Unsere Partner
-          </span>
-          <h3 className="text-2xl font-bold text-secondary mb-3">
-            Unternehmen, die uns vertrauen
-          </h3>
-          <p className="text-secondary/80 text-base leading-relaxed max-w-2xl mx-auto">
-            Ein Auszug aus unseren bisherigen Projekten — werfen Sie gerne einen Blick auf die Live-Websites.
-          </p>
-        </div>
+    </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6">
-          {partners.map((partner) => (
-            <div
-              key={partner.name}
-              className="flex flex-col items-center text-center gap-4"
-            >
-              <div className="w-24 h-24 rounded-2xl bg-white border border-border flex items-center justify-center shadow-sm overflow-hidden p-3">
-                <Image
-                  src={partner.logo}
-                  alt={`${partner.name} Logo`}
-                  width={96}
-                  height={96}
-                  className="object-contain w-full h-full"
-                />
-              </div>
-              <h4 className="text-sm font-semibold text-secondary leading-tight min-h-[2.5rem] flex items-center">
-                {partner.name}
-              </h4>
-              <a
-                href={partner.website}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={`Website von ${partner.name} besuchen`}
-                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold bg-primary/10 text-primary border border-primary/20 hover:bg-primary hover:text-white transition-colors duration-200"
-              >
-                <Eye className="w-3.5 h-3.5" />
-                Website ansehen
-              </a>
-            </div>
-          ))}
-        </div>
+    {/* Unsere Partner — eigene Section, ohne Box */}
+    <section className="mt-24 md:mt-32">
+      <div className="text-center mb-14 md:mb-16">
+        <span className="inline-block text-sm font-semibold uppercase tracking-widest text-primary mb-4">
+          Unsere Partner
+        </span>
+        <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-4">
+          Unternehmen, die uns vertrauen
+        </h2>
+        <p className="text-lg text-secondary/80 leading-relaxed max-w-2xl mx-auto">
+          Ein Auszug aus unseren bisherigen Projekten — werfen Sie gerne einen Blick auf die Live-Websites.
+        </p>
       </div>
 
-    </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 md:gap-12">
+        {partners.map((partner) => (
+          <div
+            key={partner.name}
+            className="flex flex-col items-center text-center gap-5"
+          >
+            <div className="w-36 h-36 md:w-40 md:h-40 rounded-3xl bg-white border border-border flex items-center justify-center shadow-md overflow-hidden p-5">
+              <Image
+                src={partner.logo}
+                alt={`${partner.name} Logo`}
+                width={160}
+                height={160}
+                className="object-contain w-full h-full"
+              />
+            </div>
+            <h3 className="text-lg md:text-xl font-bold text-secondary leading-tight">
+              {partner.name}
+            </h3>
+            <a
+              href={partner.website}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`Website von ${partner.name} besuchen`}
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold bg-primary/10 text-primary border border-primary/20 hover:bg-primary hover:text-white transition-colors duration-200"
+            >
+              <Eye className="w-4 h-4" />
+              Website ansehen
+            </a>
+          </div>
+        ))}
+      </div>
+    </section>
+    </>
   );
 };
 
