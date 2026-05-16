@@ -1,6 +1,7 @@
 import './globals.css';
 import { Toaster } from 'sonner';
 import CookieBanner from '@/components/CookieBanner';
+import AnalyticsScripts from '@/components/AnalyticsScripts';
 
 export const metadata = {
   metadataBase: new URL('https://media-castle.de'),
@@ -35,6 +36,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="de">
+      <head>
+        <AnalyticsScripts />
+      </head>
       <body>
         {children}
         <Toaster />
