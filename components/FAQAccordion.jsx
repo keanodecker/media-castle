@@ -72,7 +72,7 @@ const faqs = [
           Jedes Projekt ist individuell — der Aufwand richtet sich nach Umfang, gewünschten Funktionen (z. B. Buchungssystem, Mehrsprachigkeit, Online-Shop), Bildmaterial und Pflegeumfang. Wir nennen deshalb bewusst keine pauschalen Preise, sondern erstellen Ihnen ein transparentes Festpreis-Angebot, das genau zu Ihrem Vorhaben passt.
         </p>
         <p>
-          Als junges Studio aus Lahr legen wir Wert auf langfristige Partnerschaften und faire Konditionen — Sie erhalten bei uns hochwertige Qualität, ohne dass der Preis zur Hürde wird. Im kostenlosen Erstgespräch hören wir uns Ihre Vorstellungen genau an und erstellen Ihnen anschließend ein verbindliches, schriftliches Angebot — ohne versteckte Kosten.
+          Als junges Studio legen wir Wert auf langfristige Partnerschaften und faire Konditionen — Sie erhalten bei uns hochwertige Qualität, ohne dass der Preis zur Hürde wird. Im kostenlosen Erstgespräch hören wir uns Ihre Vorstellungen genau an und erstellen Ihnen anschließend ein verbindliches, schriftliches Angebot — ohne versteckte Kosten.
         </p>
       </div>
     )
