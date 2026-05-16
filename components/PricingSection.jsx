@@ -9,9 +9,6 @@ const adminDashboardFeature = {
 const plans = [
   {
     name: 'Landing Page',
-    price: '700',
-    prefix: 'ab ',
-    monthly: '50',
     description: 'Perfekt für den professionellen Start im Netz.',
     features: [
       { label: 'Individuelles Design' },
@@ -25,9 +22,6 @@ const plans = [
   },
   {
     name: 'Landing Page Plus',
-    price: '1.150',
-    prefix: 'ab ',
-    monthly: '70',
     description: 'Erweiterte Funktionen für mehr Reichweite.',
     features: [
       { label: 'Alles aus Landing Page' },
@@ -40,9 +34,6 @@ const plans = [
   },
   {
     name: 'Online Shop',
-    price: '1.500',
-    prefix: 'ab ',
-    monthly: '90',
     description: 'Ihr professioneller digitaler Verkaufskanal.',
     features: [
       { label: 'Individuelles Shop-Design' },
@@ -61,17 +52,17 @@ const PricingSection = () => {
     <section className="py-24 bg-muted/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="mb-4 text-secondary">Transparente Preise</h2>
+          <h2 className="mb-4 text-secondary">Unsere Pakete im Überblick</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Wählen Sie das passende Paket für Ihre Anforderungen. Keine versteckten Kosten, klare Kommunikation.
+            Maßgeschneiderte Lösungen für jede Anforderung — mit klarem Fokus auf Qualität, durchdachtem Design und nachhaltigem Nutzen für Ihr Unternehmen.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8 items-start">
+        <div className="grid lg:grid-cols-3 gap-8 items-stretch">
           {plans.map((plan, index) => (
             <div
               key={index}
-              className={`relative bg-white rounded-3xl p-8 transition-all duration-300 hover:shadow-xl ${
+              className={`relative bg-white rounded-3xl p-8 transition-all duration-300 hover:shadow-xl flex flex-col ${
                 plan.recommended
                   ? 'border-2 border-primary shadow-lg scale-100 lg:scale-105 z-10'
                   : 'border border-border'
@@ -85,21 +76,10 @@ const PricingSection = () => {
 
               <div className="mb-8">
                 <h3 className="text-xl font-semibold text-secondary mb-2">{plan.name}</h3>
-                <p className="text-sm text-muted-foreground h-10">{plan.description}</p>
+                <p className="text-sm text-muted-foreground">{plan.description}</p>
               </div>
 
-              <div className="mb-8">
-                <div className="flex items-baseline gap-1">
-                  {plan.prefix && <span className="text-xl font-medium text-secondary">{plan.prefix}</span>}
-                  <span className="text-4xl font-bold text-secondary">€{plan.price}</span>
-                  <span className="text-muted-foreground">einmalig</span>
-                </div>
-                <div className="mt-2 text-sm font-medium text-primary">
-                  + €{plan.monthly} / Monat Instandhaltung
-                </div>
-              </div>
-
-              <ul className="space-y-4 mb-6">
+              <ul className="space-y-4 mb-8 flex-1">
                 {plan.features.map((feature, fIndex) => (
                   <li key={fIndex} className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
@@ -116,10 +96,6 @@ const PricingSection = () => {
                   </li>
                 ))}
               </ul>
-
-              <p className="text-xs text-muted-foreground leading-relaxed mb-6">
-                Endpreis abhängig vom konkreten Projektumfang. Für ein verbindliches Angebot vereinbaren Sie gerne ein kostenloses Erstgespräch.
-              </p>
 
               <div className="flex flex-col gap-3">
                 <Link
@@ -141,9 +117,9 @@ const PricingSection = () => {
           ))}
         </div>
 
-        <div className="mt-12 text-center">
-          <p className="text-sm text-muted-foreground max-w-3xl mx-auto">
-            * Alle Preise sind Nettopreise zzgl. der gesetzlichen MwSt. Die monatliche Instandhaltung umfasst Updates, Backups und technischen Support und variiert je nach Aufwand.
+        <div className="mt-16 max-w-3xl mx-auto text-center">
+          <p className="text-sm text-muted-foreground leading-relaxed">
+            Jedes Projekt ist individuell — der Aufwand richtet sich nach Umfang, Funktionen und gewünschtem Pflegeumfang. Als junges Studio aus Lahr legen wir Wert auf langfristige Partnerschaften und besonders faire Konditionen, ohne Kompromisse bei Qualität und Design. Im kostenlosen Erstgespräch besprechen wir Ihre Vorstellungen und erstellen Ihnen anschließend ein transparentes, schriftliches Festpreis-Angebot — ohne versteckte Kosten.
           </p>
         </div>
       </div>
