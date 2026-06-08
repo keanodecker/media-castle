@@ -110,11 +110,11 @@ export default function KontaktPage() {
           </motion.div>
 
           {/* Process Section — Sticky Scroll-Animation */}
-          <div className="mb-24">
-            <div ref={processRef} className="relative md:h-[200vh]">
-              <div className="md:sticky md:top-0 md:h-screen md:flex md:items-center md:py-8">
+          <div className="mb-12">
+            <div ref={processRef} className="relative md:h-[180vh]">
+              <div className="md:sticky md:top-0 md:h-screen md:flex md:items-center">
                 <div className="w-full">
-                  <h2 className="text-center mb-12 text-secondary">So arbeiten wir zusammen</h2>
+                  <h2 className="text-center mb-10 text-secondary">So arbeiten wir zusammen</h2>
                   <div className="relative">
                     {/* Connecting Line (Desktop) — Hintergrund */}
                     <div className="hidden md:block absolute top-8 left-[10%] right-[10%] h-1 bg-border rounded-full z-0" />
@@ -130,16 +130,16 @@ export default function KontaktPage() {
                         return (
                           <div key={index} className="flex flex-col items-center text-center">
                             <div
-                              className={`w-16 h-16 rounded-full flex items-center justify-center text-2xl mb-6 shadow-sm transition-colors duration-300 ${
+                              className={`w-16 h-16 bg-white rounded-full flex items-center justify-center text-2xl mb-5 shadow-sm transition-all duration-300 ${
                                 isActive
-                                  ? 'bg-primary border-2 border-primary text-white scale-110'
-                                  : 'bg-white border-2 border-primary text-secondary'
+                                  ? 'border-[3px] border-primary scale-110'
+                                  : 'border-2 border-primary/40'
                               }`}
                             >
                               {step.icon}
                             </div>
                             <h3
-                              className={`text-lg font-bold mb-3 transition-colors duration-300 ${
+                              className={`text-lg font-bold mb-2 transition-colors duration-300 ${
                                 isActive ? 'text-primary' : 'text-secondary'
                               }`}
                             >
