@@ -24,19 +24,19 @@ export default function PartnerPage() {
       name: 'Ballonkunst Lahr',
       logo: '/Logo-Kunden/Ballongkunst_Lahr-Logo-Website.png.png',
       services: ['Website Design'],
-      status: 'wip',
+      status: 'online',
     },
     {
       name: 'KSL Boxing Lahr',
       logo: '/Logo-Kunden/KSL-Boxing-Logo-Website.png.png',
       services: ['Website Design', 'Social Media Management'],
-      status: 'wip',
+      status: 'online',
     },
     {
       name: 'Fussballverein Lahr West',
       logo: '/Logo-Kunden/Logos.png',
       services: ['Website Design'],
-      status: 'wip',
+      status: 'online',
     },
   ];
 
