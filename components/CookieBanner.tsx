@@ -280,42 +280,39 @@ export default function CookieBanner() {
 
       {/* Banner */}
       {visible && !showConfigure && (
-        <div className="fixed bottom-0 left-0 right-0 z-[9997] p-4 sm:p-6">
-          <div className="max-w-4xl mx-auto bg-white border border-border rounded-3xl shadow-2xl p-5 sm:p-6">
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 sm:items-center">
-              {/* Text */}
-              <div className="flex-1 min-w-0">
-                <p className="font-semibold text-secondary mb-1">Diese Website verwendet Cookies</p>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  Wir setzen technisch notwendige Cookies ein, um den Betrieb dieser Website zu gewährleisten.
-                  Mit Ihrer Einwilligung können wir darüber hinaus optionale Cookies aktivieren.
-                  Aktuell ist kein Tracking aktiv. Weitere Informationen finden Sie in unserer{' '}
-                  <a href="/datenschutz" className="underline underline-offset-2 hover:text-primary transition-colors">
-                    Datenschutzerklärung
-                  </a>
-                  .
-                </p>
-              </div>
-
-              {/* Buttons */}
-              <div className="flex flex-col xs:flex-row sm:flex-col md:flex-row gap-2 flex-shrink-0">
+        <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-[9997] w-[calc(100vw-2rem)] max-w-sm">
+          <div className="bg-white border border-border rounded-3xl shadow-2xl p-5">
+            <p className="font-semibold text-secondary mb-2 text-sm">
+              Diese Website verwendet Cookies
+            </p>
+            <p className="text-xs text-muted-foreground leading-relaxed mb-4">
+              Wir setzen technisch notwendige Cookies ein, um den Betrieb dieser Website zu gewährleisten.
+              Mit Ihrer Einwilligung können wir optionale Cookies aktivieren. Aktuell ist kein Tracking aktiv.
+              Mehr dazu in unserer{' '}
+              <a href="/datenschutz" className="underline underline-offset-2 hover:text-primary transition-colors">
+                Datenschutzerklärung
+              </a>
+              .
+            </p>
+            <div className="flex flex-col gap-2">
+              <button
+                onClick={acceptAll}
+                className="btn-primary text-sm py-2.5 w-full"
+              >
+                Accept all
+              </button>
+              <div className="flex gap-2">
                 <button
                   onClick={rejectAll}
-                  className="btn-outline text-sm px-5 py-2.5 whitespace-nowrap"
+                  className="btn-outline text-sm py-2.5 flex-1"
                 >
                   Reject all
                 </button>
                 <button
                   onClick={() => setShowConfigure(true)}
-                  className="btn-outline text-sm px-5 py-2.5 whitespace-nowrap"
+                  className="btn-outline text-sm py-2.5 flex-1"
                 >
                   Configure
-                </button>
-                <button
-                  onClick={acceptAll}
-                  className="btn-primary text-sm px-5 py-2.5 whitespace-nowrap"
-                >
-                  Accept all
                 </button>
               </div>
             </div>
