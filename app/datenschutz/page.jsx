@@ -136,9 +136,76 @@ export default function DatenschutzPage() {
             </section>
 
             <section>
-              <h2 className="text-xl font-semibold text-secondary mb-3">6. Aktualität</h2>
+              <h2 className="text-xl font-semibold text-secondary mb-3">6. Cookies und Einwilligungsverwaltung</h2>
+
+              <p className="mb-4">
+                Unsere Website verwendet Cookies. Cookies sind kleine Textdateien, die in Ihrem Browser gespeichert
+                werden. Beim erstmaligen Besuch unserer Website wird Ihnen ein Cookie-Banner angezeigt, über den
+                Sie Ihre Einwilligung zur Verwendung optionaler Cookies erteilen oder ablehnen können.
+              </p>
+
+              <h3 className="text-base font-semibold text-secondary mt-6 mb-3">Verwendete Cookie-Kategorien</h3>
+
+              <div className="space-y-4">
+                {[
+                  {
+                    name: 'Notwendige Cookies',
+                    basis: 'Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse am technischen Betrieb)',
+                    desc: 'Diese Cookies sind für den technischen Betrieb der Website erforderlich und können nicht deaktiviert werden. Sie speichern z. B. Ihre Cookie-Einwilligung (LocalStorage-Key: "cookieConsent"). Ohne diese Cookies kann die Website nicht ordnungsgemäß funktionieren.',
+                    active: true,
+                  },
+                  {
+                    name: 'Funktionale Cookies',
+                    basis: 'Art. 6 Abs. 1 lit. a DSGVO (Einwilligung)',
+                    desc: 'Diese Cookies ermöglichen erweiterte Funktionen und eine Personalisierung. Aktuell werden keine funktionalen Drittanbieter-Cookies gesetzt.',
+                    active: false,
+                  },
+                  {
+                    name: 'Analyse-Cookies',
+                    basis: 'Art. 6 Abs. 1 lit. a DSGVO (Einwilligung)',
+                    desc: 'Diese Cookies helfen uns zu verstehen, wie Besucher die Website nutzen. Aktuell sind keine Analyse-Dienste aktiv. Es wird kein Google Analytics, kein Matomo oder vergleichbares Tracking eingesetzt.',
+                    active: false,
+                  },
+                  {
+                    name: 'Marketing-Cookies',
+                    basis: 'Art. 6 Abs. 1 lit. a DSGVO (Einwilligung)',
+                    desc: 'Diese Cookies dienen der Schaltung personalisierter Werbung. Aktuell sind keine Marketing- oder Retargeting-Dienste aktiv. Es wird kein Meta Pixel, kein Google Ads Tracking oder Ähnliches eingesetzt.',
+                    active: false,
+                  },
+                ].map((cat) => (
+                  <div key={cat.name} className="pl-4 border-l-2 border-border">
+                    <div className="flex items-center gap-3 mb-1 flex-wrap">
+                      <span className="font-semibold text-secondary text-sm">{cat.name}</span>
+                      <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${cat.active ? 'bg-green-50 text-green-700' : 'bg-gray-100 text-gray-500'}`}>
+                        {cat.active ? 'Aktuell aktiv' : 'Aktuell nicht aktiv'}
+                      </span>
+                    </div>
+                    <p className="text-sm mb-1">
+                      <span className="text-secondary/60">Rechtsgrundlage: </span>{cat.basis}
+                    </p>
+                    <p className="text-sm">{cat.desc}</p>
+                  </div>
+                ))}
+              </div>
+
+              <h3 className="text-base font-semibold text-secondary mt-6 mb-3">Einwilligung widerrufen oder ändern</h3>
+              <p className="mb-3">
+                Sie können Ihre Cookie-Einwilligung jederzeit widerrufen oder anpassen. Klicken Sie dazu auf
+                den Link <strong>„Cookie-Einstellungen"</strong> im Footer dieser Website. Es öffnet sich
+                das Einstellungsmenü, in dem Sie Ihre Auswahl anpassen und speichern können.
+              </p>
               <p>
-                Diese Datenschutzerklärung ist aktuell gültig und hat den Stand März 2025.
+                Alternativ können Sie Ihre gespeicherte Einwilligung manuell löschen, indem Sie in Ihrem
+                Browser unter „Entwicklertools → Application → Local Storage" den Eintrag mit dem
+                Schlüssel <code className="text-xs bg-muted px-1 py-0.5 rounded">cookieConsent</code> entfernen.
+                Beim nächsten Seitenbesuch wird der Cookie-Banner erneut angezeigt.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-xl font-semibold text-secondary mb-3">7. Aktualität</h2>
+              <p>
+                Diese Datenschutzerklärung ist aktuell gültig und hat den Stand Mai 2025.
               </p>
             </section>
 

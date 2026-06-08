@@ -1,5 +1,6 @@
 import './globals.css';
 import { Toaster } from 'sonner';
+import CookieBanner from '@/components/CookieBanner';
 
 export const metadata = {
   metadataBase: new URL('https://media-castle.de'),
@@ -37,6 +38,7 @@ export default function RootLayout({ children }) {
       <body>
         {children}
         <Toaster />
+        <CookieBanner />
       </body>
     </html>
   );
