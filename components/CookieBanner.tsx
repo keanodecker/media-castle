@@ -231,12 +231,6 @@ export default function CookieBanner() {
           className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-[9998] w-[calc(100vw-2rem)] max-w-sm"
           style={{ animation: 'slideUp 0.45s cubic-bezier(0.16,1,0.3,1) both' }}
         >
-          <style>{`
-            @keyframes slideUp {
-              from { opacity: 0; transform: translateY(32px); }
-              to   { opacity: 1; transform: translateY(0); }
-            }
-          `}</style>
           <div className="bg-white border border-border rounded-3xl shadow-2xl p-5">
             <p className="font-semibold text-secondary mb-2 text-sm">Diese Website verwendet Cookies</p>
             <p className="text-xs text-muted-foreground leading-relaxed mb-4">
