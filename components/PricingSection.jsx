@@ -119,7 +119,7 @@ const PricingSection = () => {
 
         <div className="mt-16 max-w-3xl mx-auto text-center">
           <p className="text-sm text-muted-foreground leading-relaxed">
-            Jedes Projekt ist individuell — der Aufwand richtet sich nach Umfang, Funktionen und gewünschtem Pflegeumfang. Als junges Studio aus Lahr legen wir Wert auf langfristige Partnerschaften und besonders faire Konditionen, ohne Kompromisse bei Qualität und Design. Im kostenlosen Erstgespräch besprechen wir Ihre Vorstellungen und erstellen Ihnen anschließend ein transparentes, schriftliches Festpreis-Angebot — ohne versteckte Kosten.
+            Jedes Projekt ist individuell — der Aufwand richtet sich nach Umfang, Funktionen und gewünschtem Pflegeumfang. Als junges Studio legen wir Wert auf langfristige Partnerschaften und besonders faire Konditionen, ohne Kompromisse bei Qualität und Design. Im kostenlosen Erstgespräch besprechen wir Ihre Vorstellungen und erstellen Ihnen anschließend ein transparentes, schriftliches Festpreis-Angebot — ohne versteckte Kosten.
           </p>
         </div>
       </div>
