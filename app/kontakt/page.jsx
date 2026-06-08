@@ -18,7 +18,7 @@ export default function KontaktPage() {
   const processRef = useRef(null);
   const { scrollYProgress: processScroll } = useScroll({
     target: processRef,
-    offset: ['start 85%', 'center 55%'],
+    offset: ['start start', 'end end'],
   });
   const lineScale = useTransform(processScroll, [0, 1], [0, 1]);
   const [activeStep, setActiveStep] = useState(-1);
@@ -109,47 +109,54 @@ export default function KontaktPage() {
             </p>
           </motion.div>
 
-          {/* Process Section */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="mb-24"
-          >
-            <h2 className="text-center mb-12 text-secondary">So arbeiten wir zusammen</h2>
-            <div ref={processRef} className="relative">
-              {/* Connecting Line (Desktop) — Hintergrund */}
-              <div className="hidden md:block absolute top-8 left-[10%] right-[10%] h-1 bg-border rounded-full z-0" />
-              {/* Connecting Line (Desktop) — blaue Progress-Fuellung */}
-              <motion.div
-                className="hidden md:block absolute top-8 left-[10%] right-[10%] h-1 bg-primary rounded-full z-0 origin-left"
-                style={{ scaleX: lineScale }}
-              />
+          {/* Process Section — Sticky Scroll-Animation */}
+          <div className="mb-24">
+            <div ref={processRef} className="relative md:h-[200vh]">
+              <div className="md:sticky md:top-0 md:h-screen md:flex md:items-center md:py-8">
+                <div className="w-full">
+                  <h2 className="text-center mb-12 text-secondary">So arbeiten wir zusammen</h2>
+                  <div className="relative">
+                    {/* Connecting Line (Desktop) — Hintergrund */}
+                    <div className="hidden md:block absolute top-8 left-[10%] right-[10%] h-1 bg-border rounded-full z-0" />
+                    {/* Connecting Line (Desktop) — blaue Progress-Fuellung */}
+                    <motion.div
+                      className="hidden md:block absolute top-8 left-[10%] right-[10%] h-1 bg-primary rounded-full z-0 origin-left"
+                      style={{ scaleX: lineScale }}
+                    />
 
-              <div className="grid md:grid-cols-4 gap-8 relative z-10">
-                {processSteps.map((step, index) => {
-                  const isActive = activeStep >= index;
-                  return (
-                    <div key={index} className="flex flex-col items-center text-center">
-                      <div
-                        className={`w-16 h-16 rounded-full flex items-center justify-center text-2xl mb-6 shadow-sm transition-colors duration-300 ${
-                          isActive
-                            ? 'bg-primary border-2 border-primary text-white'
-                            : 'bg-white border-2 border-primary text-secondary'
-                        }`}
-                      >
-                        {step.icon}
-                      </div>
-                      <h3 className="text-lg font-bold text-secondary mb-3">{index + 1}. {step.title}</h3>
-                      <p className="text-sm text-muted-foreground leading-relaxed">
-                        {step.description}
-                      </p>
+                    <div className="grid md:grid-cols-4 gap-8 relative z-10">
+                      {processSteps.map((step, index) => {
+                        const isActive = activeStep >= index;
+                        return (
+                          <div key={index} className="flex flex-col items-center text-center">
+                            <div
+                              className={`w-16 h-16 rounded-full flex items-center justify-center text-2xl mb-6 shadow-sm transition-colors duration-300 ${
+                                isActive
+                                  ? 'bg-primary border-2 border-primary text-white scale-110'
+                                  : 'bg-white border-2 border-primary text-secondary'
+                              }`}
+                            >
+                              {step.icon}
+                            </div>
+                            <h3
+                              className={`text-lg font-bold mb-3 transition-colors duration-300 ${
+                                isActive ? 'text-primary' : 'text-secondary'
+                              }`}
+                            >
+                              {index + 1}. {step.title}
+                            </h3>
+                            <p className="text-sm text-muted-foreground leading-relaxed">
+                              {step.description}
+                            </p>
+                          </div>
+                        );
+                      })}
                     </div>
-                  );
-                })}
+                  </div>
+                </div>
               </div>
             </div>
-          </motion.div>
+          </div>
 
           <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
             {/* Contact Form */}
