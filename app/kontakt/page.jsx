@@ -110,11 +110,11 @@ export default function KontaktPage() {
           </motion.div>
 
           {/* Process Section — Sticky Scroll-Animation */}
-          <div className="mb-12">
-            <div ref={processRef} className="relative md:h-[180vh]">
+          <div className="mb-4">
+            <div ref={processRef} className="relative md:h-[120vh]">
               <div className="md:sticky md:top-0 md:h-screen md:flex md:items-center">
                 <div className="w-full">
-                  <h2 className="text-center mb-10 text-secondary">So arbeiten wir zusammen</h2>
+                  <h2 className="text-center mb-8 text-secondary">So arbeiten wir zusammen</h2>
                   <div className="relative">
                     {/* Connecting Line (Desktop) — Hintergrund */}
                     <div className="hidden md:block absolute top-8 left-[10%] right-[10%] h-1 bg-border rounded-full z-0" />
