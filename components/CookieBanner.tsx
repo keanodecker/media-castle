@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { X, ChevronDown, ChevronUp, Lock } from 'lucide-react';
+import { updateGtagConsent } from '@/lib/consent';
 
 type CookieConsent = {
   necessary: boolean;
@@ -300,8 +301,10 @@ export default function CookieBanner() {
     try {
       const saved = localStorage.getItem(STORAGE_KEY);
       if (saved) {
-        setConsent({ ...ALL_REJECTED, ...JSON.parse(saved), necessary: true });
+        const parsed = { ...ALL_REJECTED, ...JSON.parse(saved), necessary: true };
+        setConsent(parsed);
         setShowBanner(false);
+        updateGtagConsent(parsed);
       }
     } catch {
       // ignore
@@ -322,14 +325,16 @@ export default function CookieBanner() {
   }, []);
 
   const persist = (c: CookieConsent) => {
+    const finalConsent = { ...c, necessary: true };
     try {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify({ ...c, necessary: true }));
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(finalConsent));
     } catch {
       // ignore
     }
-    setConsent({ ...c, necessary: true });
+    setConsent(finalConsent);
     setShowBanner(false);
     setShowConfigure(false);
+    updateGtagConsent(finalConsent);
   };
 
   return (
