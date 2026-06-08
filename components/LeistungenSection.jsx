@@ -9,7 +9,7 @@ const partners = [
   { name: 'Cesar Dienstleistungen',    logo: '/Logo-Kunden/Cesar_Dienstleistungen-Logo-Website.png',  website: 'https://cesardienstleistungen.de' },
   { name: 'Ballonkunst Lahr',          logo: '/Logo-Kunden/Ballongkunst_Lahr-Logo-Website.png.png',   website: 'https://ballonkunst-lahr.de' },
   { name: 'KSL Boxing Lahr',           logo: '/Logo-Kunden/KSL-Boxing-Logo-Website.png.png',          website: 'https://ksl-boxing.com' },
-  { name: 'FV Lahr West',              logo: '/Logo-Kunden/Logos.png',                                website: 'https://fclahrwest.de' },
+  { name: 'FV Lahr West',              logo: '/Logo-Kunden/FV-Lahr-West-Logo.png',                                website: 'https://fclahrwest.de' },
 ];
 
 const LeistungenSection = () => {

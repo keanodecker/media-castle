@@ -39,7 +39,7 @@ export default function PartnerPage() {
     },
     {
       name: 'Fussballverein Lahr West',
-      logo: '/Logo-Kunden/Logos.png',
+      logo: '/Logo-Kunden/FV-Lahr-West-Logo.png',
       services: ['Website Design'],
       status: 'online',
       website: 'https://fclahrwest.de',
