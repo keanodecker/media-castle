@@ -33,7 +33,7 @@ export default function PartnerPage() {
     {
       name: 'KSL Boxing Lahr',
       logo: '/Logo-Kunden/KSL-Boxing-Logo-Website.png.png',
-      services: ['Website Design', 'Social Media Management'],
+      services: ['Website Design'],
       status: 'online',
       website: 'https://ksl-boxing.com',
     },

@@ -29,8 +29,8 @@ const SECTIONS = [
     label: 'Online Präsenz',
     title: 'Ihre Präsenz im Netz',
     description:
-      'Social Media Management, SEO und Google My Business — wir machen Sie sichtbar und stärken Ihre digitale Reichweite nachhaltig.',
-    tags: ['Social Media', 'SEO', 'Google My Business', 'Lokale Optimierung'],
+      'SEO und Google My Business — wir machen Sie sichtbar und stärken Ihre digitale Reichweite nachhaltig.',
+    tags: ['SEO', 'Google My Business', 'Lokale Optimierung', 'Sichtbarkeit'],
     href: '/leistungen/online-prasenz',
     bg: '#1e3a8a',
     accent: '#93c5fd',

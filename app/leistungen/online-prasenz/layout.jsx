@@ -1,10 +1,10 @@
 export const metadata = {
   title: 'Online Präsenz & SEO Lahr',
-  description: 'Online Präsenz & SEO für Unternehmen in Lahr: Social Media Management, Suchmaschinenoptimierung und Google My Business. Mehr Kunden online erreichen.',
-  keywords: ['SEO Lahr', 'Social Media Lahr', 'Google My Business Lahr', 'Online Marketing Lahr', 'Instagram Marketing Lahr'],
+  description: 'Online Präsenz & SEO für Unternehmen in Lahr: Suchmaschinenoptimierung und Google My Business. Mehr Kunden online erreichen.',
+  keywords: ['SEO Lahr', 'Google My Business Lahr', 'Online Marketing Lahr', 'Suchmaschinenoptimierung Lahr', 'Lokales SEO Lahr'],
   openGraph: {
     title: 'Online Präsenz & SEO Lahr | Media Castle',
-    description: 'Social Media Management und SEO für lokale Unternehmen. Mehr Sichtbarkeit in Lahr und der Region.',
+    description: 'SEO und Google My Business für lokale Unternehmen. Mehr Sichtbarkeit in Lahr und der Region.',
   },
 };
 

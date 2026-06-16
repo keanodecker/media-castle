@@ -9,10 +9,10 @@ export const metadata = {
     default: 'Media Castle – Rund um Online Präsenz',
     template: '%s | Media Castle',
   },
-  description: 'Professionelles Webdesign und Online Marketing für Unternehmen in Lahr und Umgebung. Individuelle Websites, SEO & Social Media — aus einer Hand.',
+  description: 'Professionelles Webdesign und Online Marketing für Unternehmen in Lahr und Umgebung. Individuelle Websites, SEO & Google My Business — aus einer Hand.',
   keywords: [
     'Webdesign Lahr', 'Website erstellen Lahr', 'Webdesign Friesenheim',
-    'SEO Lahr', 'Online Marketing Lahr', 'Social Media Management Lahr',
+    'SEO Lahr', 'Online Marketing Lahr', 'Google My Business Lahr',
     'Webdesign Agentur Lahr', 'Homepage erstellen Lahr', 'Website Agentur Ortenau',
   ],
   openGraph: {

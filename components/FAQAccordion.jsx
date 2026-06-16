@@ -36,7 +36,7 @@ const faqs = [
     question: 'Bieten wir auch einzelne Leistungen an?',
     answer: (
       <p>
-        Ja, wir bieten auch isolierte Dienstleistungen wie Suchmaschinenoptimierung (SEO), Google Maps Einträge, Logo- und Flyerdesign oder Social Media Management an. Sprechen Sie uns einfach darauf an.
+        Ja, wir bieten auch isolierte Dienstleistungen wie Suchmaschinenoptimierung (SEO), Google Maps Einträge sowie Logo- und Flyerdesign an. Sprechen Sie uns einfach darauf an.
       </p>
     )
   },

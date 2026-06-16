@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { Code, Palette, Smartphone, Zap, Search, TrendingUp, Users, MessageCircle, MapPin, FileText, Sparkles, LayoutDashboard, Eye } from 'lucide-react';
+import { Code, Palette, Smartphone, Zap, Search, TrendingUp, Users, MapPin, FileText, Sparkles, LayoutDashboard, Eye } from 'lucide-react';
 import { MultiIconDisplay } from '@/components/ui/interactive-empty-state';
 import { FeyButton } from '@/components/ui/fey-button';
 
@@ -60,56 +60,47 @@ const LeistungenSection = () => {
         </div>
       </div>
 
-      {/* Online Präsenz — 2 Karten nebeneinander */}
-      <div className="grid md:grid-cols-2 gap-6">
-
-        {/* Social Media */}
-        <div className="card-clean flex flex-col h-full">
-          <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
-            <MessageCircle className="w-6 h-6 text-primary" />
+      {/* Online Präsenz & SEO */}
+      <div className="card-clean">
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <span className="inline-block text-xs font-semibold uppercase tracking-widest text-primary mb-4">
+              Online Präsenz
+            </span>
+            <h3 className="text-3xl md:text-4xl font-bold text-secondary mb-4">
+              Online Präsenz & SEO
+            </h3>
+            <p className="text-secondary/80 leading-relaxed mb-6">
+              Damit potenzielle Kunden Sie finden — wir optimieren Ihre Sichtbarkeit in Suchmaschinen
+              und lokal, damit Ihr Unternehmen genau dort auftaucht, wo Ihre Kunden suchen.
+            </p>
+            <ul className="space-y-3 mb-8">
+              {['Suchmaschinenoptimierung (SEO)', 'Google My Business', 'Lokale Optimierung'].map((item) => (
+                <li key={item} className="flex items-center gap-2 text-secondary/80">
+                  <TrendingUp className="w-4 h-4 text-primary flex-shrink-0" />
+                  {item}
+                </li>
+              ))}
+            </ul>
+            <FeyButton href="/leistungen/online-prasenz" variant="glass">
+              Mehr erfahren
+            </FeyButton>
           </div>
-          <span className="text-sm font-semibold uppercase tracking-widest text-primary mb-3">
-            Online Präsenz
-          </span>
-          <h3 className="text-2xl font-bold text-secondary mb-4">Social Media Management</h3>
-          <p className="text-secondary/80 text-base leading-relaxed mb-5 flex-1">
-            Authentische Inhalte für Ihre Zielgruppe — wir übernehmen Planung,
-            Erstellung und Betreuung Ihrer Kanäle.
-          </p>
-          <div className="flex flex-wrap gap-2 mb-6">
-            <span className="px-3 py-1 bg-muted text-secondary rounded-full text-sm font-medium">Instagram</span>
-            <span className="px-3 py-1 bg-muted text-secondary rounded-full text-sm font-medium">Facebook</span>
-            <span className="px-3 py-1 bg-muted text-secondary rounded-full text-sm font-medium">TikTok</span>
-          </div>
-          <FeyButton href="/leistungen/online-prasenz" variant="glass" className="w-full">
-            Mehr erfahren
-          </FeyButton>
-        </div>
-
-        {/* SEO */}
-        <div className="card-clean flex flex-col h-full">
-          <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
-            <Search className="w-6 h-6 text-primary" />
-          </div>
-          <span className="text-sm font-semibold uppercase tracking-widest text-primary mb-3">
-            Online Präsenz
-          </span>
-          <h3 className="text-2xl font-bold text-secondary mb-4">Online Präsenz & SEO</h3>
-          <p className="text-secondary/80 text-base leading-relaxed mb-5 flex-1">
-            Damit potenzielle Kunden Sie finden — wir optimieren Ihre Sichtbarkeit
-            in Suchmaschinen und lokal.
-          </p>
-          <ul className="space-y-3 mb-6">
-            {['Suchmaschinenoptimierung (SEO)', 'Google My Business', 'Lokale Optimierung'].map((item) => (
-              <li key={item} className="flex items-center gap-2 text-base text-secondary/80">
-                <TrendingUp className="w-4 h-4 text-primary flex-shrink-0" />
-                {item}
-              </li>
+          <div className="grid grid-cols-2 gap-4">
+            {[
+              { icon: Search, label: 'Google-Ranking' },
+              { icon: TrendingUp, label: 'Mehr Reichweite' },
+              { icon: MapPin, label: 'Lokale Präsenz' },
+              { icon: Users, label: 'Mehr Kunden' },
+            ].map(({ icon: Icon, label }) => (
+              <div key={label} className="bg-muted/50 rounded-xl p-4 flex flex-col items-center text-center gap-3">
+                <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
+                  <Icon className="w-5 h-5 text-primary" />
+                </div>
+                <span className="text-sm font-medium text-secondary">{label}</span>
+              </div>
             ))}
-          </ul>
-          <FeyButton href="/leistungen/online-prasenz" variant="glass" className="w-full">
-            Mehr erfahren
-          </FeyButton>
+          </div>
         </div>
       </div>
 
