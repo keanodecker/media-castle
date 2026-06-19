@@ -8,6 +8,8 @@ const partners = [
   { name: 'Cesar Sicherheit',          logo: '/Logo-Kunden/Cesarsicherheit-Logo-Website.png.png',     website: 'https://cesarsicherheit.de' },
   { name: 'Cesar Dienstleistungen',    logo: '/Logo-Kunden/Cesar_Dienstleistungen-Logo-Website.png',  website: 'https://cesardienstleistungen.de' },
   { name: 'Ballonkunst Lahr',          logo: '/Logo-Kunden/Ballongkunst_Lahr-Logo-Website.png.png',   website: 'https://ballonkunst-lahr.de' },
+  { name: 'FW Recycling',              logo: null, initials: 'FW',  color: 'bg-green-700',            website: 'https://fw-recycling.de' },
+  { name: 'Studio 21 Lahr',            logo: null, initials: 'S21', color: 'bg-purple-700',           website: 'https://www.studio21-lahr.de' },
   { name: 'KSL Boxing Lahr',           logo: '/Logo-Kunden/KSL-Boxing-Logo-Website.png.png',          website: 'https://ksl-boxing.com' },
   { name: 'FV Lahr West',              logo: '/Logo-Kunden/FV-Lahr-West-Logo.png',                                website: 'https://fclahrwest.de' },
 ];
@@ -162,15 +164,21 @@ const LeistungenSection = () => {
             key={partner.name}
             className="flex flex-col items-center text-center gap-5"
           >
-            <div className="w-36 h-36 md:w-40 md:h-40 rounded-3xl bg-white border border-border flex items-center justify-center shadow-md overflow-hidden p-5">
-              <Image
-                src={partner.logo}
-                alt={`${partner.name} Logo`}
-                width={160}
-                height={160}
-                className="object-contain w-full h-full"
-              />
-            </div>
+            {partner.logo ? (
+              <div className="w-36 h-36 md:w-40 md:h-40 rounded-3xl bg-white border border-border flex items-center justify-center shadow-md overflow-hidden p-5">
+                <Image
+                  src={partner.logo}
+                  alt={`${partner.name} Logo`}
+                  width={160}
+                  height={160}
+                  className="object-contain w-full h-full"
+                />
+              </div>
+            ) : (
+              <div className={`w-36 h-36 md:w-40 md:h-40 rounded-3xl ${partner.color} flex items-center justify-center shadow-md`}>
+                <span className="text-white font-bold text-3xl tracking-wide">{partner.initials}</span>
+              </div>
+            )}
             <h3 className="text-lg md:text-xl font-bold text-secondary leading-tight">
               {partner.name}
             </h3>
