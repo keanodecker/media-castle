@@ -45,6 +45,13 @@ export default function PartnerPage() {
       website: 'https://ksl-boxing.com',
     },
     {
+      name: 'Studio 21 Lahr',
+      logo: '/Logo-Kunden/Studio21-Lahr-Logo.png',
+      services: ['Website Design', 'SEO'],
+      status: 'online',
+      website: 'https://www.studio21-lahr.de',
+    },
+    {
       name: 'Fussballverein Lahr West',
       logo: '/Logo-Kunden/FV-Lahr-West-Logo.png',
       services: ['Website Design'],

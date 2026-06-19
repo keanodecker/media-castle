@@ -10,6 +10,7 @@ const partners = [
   { name: 'Ballonkunst Lahr',          logo: '/Logo-Kunden/Ballongkunst_Lahr-Logo-Website.png.png',   website: 'https://ballonkunst-lahr.de' },
   { name: 'FW Recycling',              logo: '/Logo-Kunden/FW-Recycling-Logo.png',                    website: 'https://fw-recycling.de' },
   { name: 'KSL Boxing Lahr',           logo: '/Logo-Kunden/KSL-Boxing-Logo-Website.png.png',          website: 'https://ksl-boxing.com' },
+  { name: 'Studio 21 Lahr',            logo: '/Logo-Kunden/Studio21-Lahr-Logo.png',                   website: 'https://www.studio21-lahr.de' },
   { name: 'FV Lahr West',              logo: '/Logo-Kunden/FV-Lahr-West-Logo.png',                                website: 'https://fclahrwest.de' },
 ];
 
