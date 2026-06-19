@@ -32,21 +32,10 @@ export default function PartnerPage() {
     },
     {
       name: 'FW Recycling',
-      logo: null,
-      initials: 'FW',
-      color: 'bg-green-700',
+      logo: '/Logo-Kunden/FW-Recycling-Logo.png',
       services: ['Website Design', 'SEO'],
       status: 'online',
       website: 'https://fw-recycling.de',
-    },
-    {
-      name: 'Studio 21 Lahr',
-      logo: null,
-      initials: 'S21',
-      color: 'bg-purple-700',
-      services: ['Website Design', 'SEO'],
-      status: 'online',
-      website: 'https://www.studio21-lahr.de',
     },
     {
       name: 'KSL Boxing Lahr',

@@ -8,8 +8,7 @@ const partners = [
   { name: 'Cesar Sicherheit',          logo: '/Logo-Kunden/Cesarsicherheit-Logo-Website.png.png',     website: 'https://cesarsicherheit.de' },
   { name: 'Cesar Dienstleistungen',    logo: '/Logo-Kunden/Cesar_Dienstleistungen-Logo-Website.png',  website: 'https://cesardienstleistungen.de' },
   { name: 'Ballonkunst Lahr',          logo: '/Logo-Kunden/Ballongkunst_Lahr-Logo-Website.png.png',   website: 'https://ballonkunst-lahr.de' },
-  { name: 'FW Recycling',              logo: null, initials: 'FW',  color: 'bg-green-700',            website: 'https://fw-recycling.de' },
-  { name: 'Studio 21 Lahr',            logo: null, initials: 'S21', color: 'bg-purple-700',           website: 'https://www.studio21-lahr.de' },
+  { name: 'FW Recycling',              logo: '/Logo-Kunden/FW-Recycling-Logo.png',                    website: 'https://fw-recycling.de' },
   { name: 'KSL Boxing Lahr',           logo: '/Logo-Kunden/KSL-Boxing-Logo-Website.png.png',          website: 'https://ksl-boxing.com' },
   { name: 'FV Lahr West',              logo: '/Logo-Kunden/FV-Lahr-West-Logo.png',                                website: 'https://fclahrwest.de' },
 ];

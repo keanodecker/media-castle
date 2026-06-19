@@ -49,14 +49,7 @@ export default function HomePage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="flex items-center justify-center gap-2 mb-6">
-              <Sparkles className="w-5 h-5 text-primary" />
-              <span className="text-sm font-medium tracking-wide uppercase text-primary">
-                Media Castle
-              </span>
-            </div>
-
-            <h1 className="text-white mb-6">
+            <h1 className="text-white mb-6 mt-2">
               Ihre digitale Präsenz.<br />
               Professionell. Wirkungsvoll.
             </h1>
