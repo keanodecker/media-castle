@@ -249,7 +249,7 @@ function ConfigureModal({
                 cursor: 'pointer',
               }}
             >
-              Accept all
+              Alle akzeptieren
             </button>
             <div style={{ display: 'flex', gap: '8px' }}>
               <button
@@ -282,7 +282,7 @@ function ConfigureModal({
                   cursor: 'pointer',
                 }}
               >
-                Reject all
+                Alle ablehnen
               </button>
             </div>
           </div>
@@ -397,7 +397,7 @@ export default function CookieBanner() {
                   width: '100%',
                 }}
               >
-                Accept all
+                Alle akzeptieren
               </button>
               <div style={{ display: 'flex', gap: '8px' }}>
                 <button
@@ -414,7 +414,7 @@ export default function CookieBanner() {
                     cursor: 'pointer',
                   }}
                 >
-                  Reject all
+                  Alle ablehnen
                 </button>
                 <button
                   onClick={() => setShowConfigure(true)}
