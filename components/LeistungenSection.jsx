@@ -144,9 +144,9 @@ const LeistungenSection = () => {
 
     </div>
 
-    {/* Unsere Partner — eigene Section, ohne Box */}
+    {/* Unsere Partner — Kreis-Anordnung */}
     <section className="mt-24 md:mt-32">
-      <div className="text-center mb-14 md:mb-16">
+      <div className="text-center mb-12 md:mb-14">
         <span className="inline-block text-sm font-semibold uppercase tracking-widest text-primary mb-4">
           Unsere Partner
         </span>
@@ -158,41 +158,95 @@ const LeistungenSection = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 md:gap-12">
+      {/* Desktop: Kreis */}
+      <div className="hidden md:block relative w-full max-w-[720px] mx-auto aspect-square">
+        {/* Dekorative Ringe */}
+        <div className="absolute inset-[6%] rounded-full border-2 border-primary/10" />
+        <div className="absolute inset-[22%] rounded-full border border-primary/5" />
+
+        {/* Zentrum */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center pointer-events-none">
+          <p className="text-xs font-semibold uppercase tracking-widest text-primary/70 mb-2">
+            Made in Lahr
+          </p>
+          <p
+            className="text-4xl lg:text-5xl font-bold text-secondary leading-tight"
+            style={{ fontFamily: 'DM Serif Display, serif' }}
+          >
+            Media<br />Castle
+          </p>
+        </div>
+
+        {/* Partner auf dem Kreis */}
+        {partners.map((partner, i) => {
+          const angle = (-90 + (360 / partners.length) * i) * (Math.PI / 180);
+          const x = 42 * Math.cos(angle);
+          const y = 42 * Math.sin(angle);
+          return (
+            <a
+              key={partner.name}
+              href={partner.website}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`${partner.name} Website besuchen`}
+              className="absolute top-1/2 left-1/2 group flex flex-col items-center gap-2.5"
+              style={{
+                transform: `translate(calc(-50% + ${x}%), calc(-50% + ${y}%))`,
+              }}
+            >
+              {partner.logo ? (
+                <div className="w-24 h-24 lg:w-28 lg:h-28 rounded-2xl bg-white border border-border flex items-center justify-center shadow-md overflow-hidden p-3 transition-all duration-300 group-hover:shadow-xl group-hover:scale-110 group-hover:border-primary/50">
+                  <Image
+                    src={partner.logo}
+                    alt={`${partner.name} Logo`}
+                    width={112}
+                    height={112}
+                    className="object-contain w-full h-full"
+                  />
+                </div>
+              ) : (
+                <div className={`w-24 h-24 lg:w-28 lg:h-28 rounded-2xl ${partner.color} flex items-center justify-center shadow-md transition-all duration-300 group-hover:shadow-xl group-hover:scale-110`}>
+                  <span className="text-white font-bold text-2xl">{partner.initials}</span>
+                </div>
+              )}
+              <span className="text-xs lg:text-sm font-semibold text-secondary text-center max-w-[120px] leading-tight transition-colors duration-200 group-hover:text-primary">
+                {partner.name}
+              </span>
+            </a>
+          );
+        })}
+      </div>
+
+      {/* Mobile: Grid */}
+      <div className="md:hidden grid grid-cols-2 gap-8">
         {partners.map((partner) => (
-          <div
+          <a
             key={partner.name}
-            className="flex flex-col items-center text-center gap-5"
+            href={partner.website}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`${partner.name} Website besuchen`}
+            className="flex flex-col items-center text-center gap-3"
           >
             {partner.logo ? (
-              <div className="w-36 h-36 md:w-40 md:h-40 rounded-3xl bg-white border border-border flex items-center justify-center shadow-md overflow-hidden p-5">
+              <div className="w-28 h-28 rounded-2xl bg-white border border-border flex items-center justify-center shadow-md overflow-hidden p-3">
                 <Image
                   src={partner.logo}
                   alt={`${partner.name} Logo`}
-                  width={160}
-                  height={160}
+                  width={112}
+                  height={112}
                   className="object-contain w-full h-full"
                 />
               </div>
             ) : (
-              <div className={`w-36 h-36 md:w-40 md:h-40 rounded-3xl ${partner.color} flex items-center justify-center shadow-md`}>
-                <span className="text-white font-bold text-3xl tracking-wide">{partner.initials}</span>
+              <div className={`w-28 h-28 rounded-2xl ${partner.color} flex items-center justify-center shadow-md`}>
+                <span className="text-white font-bold text-2xl">{partner.initials}</span>
               </div>
             )}
-            <h3 className="text-lg md:text-xl font-bold text-secondary leading-tight">
+            <span className="text-sm font-semibold text-secondary leading-tight">
               {partner.name}
-            </h3>
-            <a
-              href={partner.website}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={`Website von ${partner.name} besuchen`}
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold bg-primary/10 text-primary border border-primary/20 hover:bg-primary hover:text-white transition-colors duration-200"
-            >
-              <Eye className="w-4 h-4" />
-              Website ansehen
-            </a>
-          </div>
+            </span>
+          </a>
         ))}
       </div>
     </section>
