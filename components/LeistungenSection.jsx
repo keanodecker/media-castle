@@ -180,8 +180,8 @@ const LeistungenSection = () => {
         {/* Partner auf dem Kreis */}
         {partners.map((partner, i) => {
           const angle = (-90 + (360 / partners.length) * i) * (Math.PI / 180);
-          const x = 42 * Math.cos(angle);
-          const y = 42 * Math.sin(angle);
+          const x = 50 + 42 * Math.cos(angle);
+          const y = 50 + 42 * Math.sin(angle);
           return (
             <a
               key={partner.name}
@@ -189,9 +189,10 @@ const LeistungenSection = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={`${partner.name} Website besuchen`}
-              className="absolute top-1/2 left-1/2 group flex flex-col items-center gap-2.5"
+              className="absolute group flex flex-col items-center gap-2.5 -translate-x-1/2 -translate-y-1/2"
               style={{
-                transform: `translate(calc(-50% + ${x}%), calc(-50% + ${y}%))`,
+                left: `${x}%`,
+                top: `${y}%`,
               }}
             >
               {partner.logo ? (
