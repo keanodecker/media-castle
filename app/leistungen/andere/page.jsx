@@ -11,7 +11,7 @@ export default function LeistungenAnderePage() {
     {
       icon: MapPin,
       title: 'Google Maps Einträge',
-      description: 'Optimierung Ihres Google My Business Profils für bessere lokale Sichtbarkeit'
+      description: 'Optimierung Ihres Google My Business Profils für bessere Sichtbarkeit bei Google'
     },
     {
       icon: FileText,

@@ -1,7 +1,7 @@
 export const metadata = {
   title: 'Leistungen',
-  description: 'Unsere Leistungen: Professionelles Webdesign, SEO, Logodesign und mehr für Unternehmen in Lahr und der Region.',
-  keywords: ['Webdesign Lahr', 'SEO Lahr', 'Logodesign Lahr', 'Leistungen Webagentur', 'Google My Business Lahr'],
+  description: 'Unsere Leistungen: Professionelles Webdesign, SEO, Logodesign und mehr für Unternehmen deutschlandweit.',
+  keywords: ['Webdesign', 'SEO', 'Logodesign', 'Leistungen Webagentur', 'Google My Business'],
   openGraph: {
     title: 'Leistungen | Media Castle',
     description: 'Webdesign, SEO & mehr — alles für Ihre digitale Präsenz aus einer Hand.',

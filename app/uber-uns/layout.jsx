@@ -1,10 +1,10 @@
 export const metadata = {
   title: 'Über uns',
-  description: 'Media Castle — Ihre Webdesign-Agentur aus Lahr. Lokal verwurzelt, digital stark. Wir begleiten Unternehmen auf dem Weg zu einer starken Online-Präsenz.',
-  keywords: ['Webdesign Agentur Lahr', 'Media Castle Lahr', 'Webagentur Friesenheim', 'digitale Agentur Ortenau'],
+  description: 'Media Castle — Ihre Webdesign-Agentur für Unternehmen deutschlandweit. Wir begleiten Sie als Partner vor, während und nach dem Projekt zu einer starken Online-Präsenz.',
+  keywords: ['Webdesign Agentur', 'Media Castle', 'Webagentur', 'digitale Agentur Deutschland'],
   openGraph: {
     title: 'Über uns | Media Castle',
-    description: 'Ihre lokale Webdesign-Agentur aus Lahr. Individuelle Lösungen, persönlicher Kontakt, langfristige Partnerschaft.',
+    description: 'Ihre Webdesign-Agentur für ganz Deutschland. Individuelle Lösungen, persönlicher Kontakt, langfristige Partnerschaft.',
   },
 };
 

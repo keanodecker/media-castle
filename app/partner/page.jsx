@@ -79,7 +79,7 @@ export default function PartnerPage() {
           >
             <h1 className="text-white mb-6">Unsere Partner</h1>
             <p className="text-xl text-white/80 max-w-3xl mx-auto">
-              Erfolgreiche Projekte und starke Partnerschaften. Entdecke, wie wir lokale Unternehmen digital voranbringen.
+              Erfolgreiche Projekte und starke Partnerschaften. Entdecke, wie wir Unternehmen digital voranbringen.
             </p>
           </motion.div>
         </div>

@@ -1,10 +1,10 @@
 export const metadata = {
   title: 'Unsere Partner & Referenzen',
-  description: 'Erfolgreiche Webprojekte von Media Castle: Referenzen aus Lahr und Umgebung. Entdecken Sie, wie wir lokale Unternehmen digital voranbringen.',
-  keywords: ['Webdesign Referenzen Lahr', 'Kundenprojekte Webagentur', 'Webdesign Beispiele Lahr', 'Referenzen Media Castle'],
+  description: 'Erfolgreiche Webprojekte von Media Castle. Entdecken Sie, wie wir Unternehmen deutschlandweit digital voranbringen.',
+  keywords: ['Webdesign Referenzen', 'Kundenprojekte Webagentur', 'Webdesign Beispiele', 'Referenzen Media Castle'],
   openGraph: {
     title: 'Partner & Referenzen | Media Castle',
-    description: 'Unsere Erfolgsgeschichten: Webprojekte für lokale Unternehmen in Lahr und der Ortenau.',
+    description: 'Unsere Erfolgsgeschichten: Webprojekte für Unternehmen deutschlandweit.',
   },
 };
 

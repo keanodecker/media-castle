@@ -73,8 +73,8 @@ const LeistungenSection = () => {
               Online Präsenz & SEO
             </h3>
             <p className="text-secondary/80 leading-relaxed mb-6">
-              Damit potenzielle Kunden Sie finden — wir optimieren Ihre Sichtbarkeit in Suchmaschinen
-              und lokal, damit Ihr Unternehmen genau dort auftaucht, wo Ihre Kunden suchen.
+              Damit potenzielle Kunden Sie finden — wir optimieren Ihre Sichtbarkeit in Suchmaschinen,
+              damit Ihr Unternehmen genau dort auftaucht, wo Ihre Kunden suchen.
             </p>
             <ul className="space-y-3 mb-8">
               {['Suchmaschinenoptimierung (SEO)', 'Google My Business', 'Lokale Optimierung'].map((item) => (
@@ -167,7 +167,7 @@ const LeistungenSection = () => {
         {/* Zentrum */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center pointer-events-none">
           <p className="text-xs font-semibold uppercase tracking-widest text-primary/70 mb-2">
-            Made in Lahr
+            Deutschlandweit
           </p>
           <p
             className="text-4xl lg:text-5xl font-bold text-secondary leading-tight"

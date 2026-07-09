@@ -1,16 +1,16 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { MapPin, Lightbulb, HeartHandshake as Handshake } from 'lucide-react';
+import { ShieldCheck, Lightbulb, HeartHandshake as Handshake } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
 export default function UberUnsPage() {
   const trustPoints = [
     {
-      icon: MapPin,
-      title: 'Lokal in Lahr',
-      description: 'Als lokales Unternehmen kennen wir die Region und ihre Bedürfnisse. Persönlicher Kontakt und kurze Wege sind für uns selbstverständlich.'
+      icon: ShieldCheck,
+      title: 'Rundum sorglos',
+      description: 'Vor dem Projekt, während der Umsetzung und danach — wir sind an Ihrer Seite. Sie müssen sich um nichts kümmern und keine Kopfschmerzen machen, den Rest übernehmen wir.'
     },
     {
       icon: Lightbulb,
@@ -45,10 +45,10 @@ export default function UberUnsPage() {
                 zu schaffen, die nicht nur gut aussehen, sondern auch messbare Ergebnisse liefern.
               </p>
               <p className="text-lg text-secondary/80 leading-relaxed">
-                Unser Ziel ist es, Unternehmen jeder Größe dabei zu unterstützen, ihre digitale Präsenz
-                zu stärken und online erfolgreich zu sein — vom lokalen Handwerksbetrieb bis hin zum
-                etablierten Unternehmen. Mit Leidenschaft, Fachwissen und einem klaren Fokus auf Ihre
-                Bedürfnisse setzen wir Ihre Projekte um.
+                Unser Ziel ist es, Unternehmen jeder Größe dabei zu unterstützen, ihre Online-Präsenz
+                zu verbessern, im Netz besser gefunden zu werden und online nachhaltig erfolgreich zu sein.
+                Mit Leidenschaft, Fachwissen und einem klaren Fokus auf Ihre Bedürfnisse setzen wir
+                Ihre Projekte um — und begleiten Sie als Partner vor, während und nach dem Projekt.
               </p>
             </div>
           </motion.div>

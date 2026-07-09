@@ -20,7 +20,7 @@ export default function LeistungenOnlinePrasenzPage() {
           >
             <h1 className="mb-6 text-secondary">Online Präsenz & SEO</h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Wir sorgen dafür, dass potenzielle Kunden Sie online finden — lokal und überregional.
+              Wir sorgen dafür, dass potenzielle Kunden Sie online finden — deutschlandweit.
             </p>
           </motion.div>
 

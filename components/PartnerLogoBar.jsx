@@ -28,7 +28,7 @@ const PartnerLogoBar = () => {
     <div className="py-16 bg-white border-y border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <p className="text-center text-sm font-medium tracking-wide uppercase text-muted-foreground mb-10">
-          Vertrauen von lokalen Unternehmen
+          Vertrauen von Unternehmen, die auf uns setzen
         </p>
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:flex lg:flex-row items-center justify-center gap-8 lg:gap-16">

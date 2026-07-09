@@ -114,7 +114,7 @@ export default function LeistungenAutomationPage() {
       icon: Headphones,
       title: 'Laufende Betreuung',
       description:
-        'Sie haben einen festen Ansprechpartner aus der Region. Bei Fragen oder Anpassungen einfach anrufen.',
+        'Sie haben einen festen, persönlichen Ansprechpartner. Bei Fragen oder Anpassungen einfach anrufen.',
     },
   ];
 
