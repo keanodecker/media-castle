@@ -111,7 +111,7 @@ export default function KontaktPage() {
 
           {/* Process Section — Sticky Scroll-Animation */}
           <div className="mb-2">
-            <div ref={processRef} className="relative md:h-[130vh]">
+            <div ref={processRef} className="relative md:h-[200vh]">
               <div className="md:sticky md:top-0 md:h-screen md:flex md:items-center">
                 <div className="w-full">
                   <h2 className="text-center mb-8 text-secondary">So arbeiten wir zusammen</h2>
