@@ -40,7 +40,7 @@ export default function UberUnsPage() {
             <h1 className="mb-8 text-secondary">Über Media Castle</h1>
             <div className="card-clean">
               <p className="text-lg text-secondary/80 leading-relaxed mb-6">
-                Media Castle ist Ihr Partner für professionelle digitale Präsenz in Lahr und Umgebung.
+                Media Castle ist Ihr Partner für professionelle digitale Präsenz — deutschlandweit.
                 Wir verbinden kreatives Design mit technischer Expertise, um Websites und Online-Lösungen
                 zu schaffen, die nicht nur gut aussehen, sondern auch messbare Ergebnisse liefern.
               </p>
