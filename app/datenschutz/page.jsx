@@ -34,7 +34,7 @@ export default function DatenschutzPage() {
               <p>
                 Media Castle<br />
                 Keano Decker<br />
-                Erlenweg 4<br />
+                Geroldsecker Straße 2<br />
                 77948 Friesenheim<br />
                 Deutschland<br />
                 <br />

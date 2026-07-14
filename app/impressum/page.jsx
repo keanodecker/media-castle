@@ -34,7 +34,7 @@ export default function ImpressumPage() {
               <p>
                 Media Castle<br />
                 Keano Decker<br />
-                Erlenweg 4<br />
+                Geroldsecker Straße 2<br />
                 77948 Friesenheim<br />
                 Deutschland
               </p>
@@ -66,7 +66,7 @@ export default function ImpressumPage() {
               </h2>
               <p>
                 Keano Decker<br />
-                Erlenweg 4<br />
+                Geroldsecker Straße 2<br />
                 77948 Friesenheim
               </p>
             </section>
