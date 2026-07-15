@@ -36,7 +36,7 @@ export async function POST(request) {
 
     await resend.emails.send({
       from: 'Media Castle <noreply@media-castle.com>',
-      to: ['info@media-castle.com', 'info@keanodecker.com'],
+      to: ['info@media-castle.com', 'info@keanodecker.com', 's.meyer@cesarsicherheit.de'],
       replyTo: email,
       subject: `Neue Kontaktanfrage von ${safeName}`,
       html,
